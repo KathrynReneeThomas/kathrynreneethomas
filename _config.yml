@@ -1,0 +1,76 @@
+# Setup
+name:             Kathryn Renee Thomas
+title:            "Writer and Actor in Los Angeles. Member of the Katydids."
+tagline:          "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
+description:      "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
+paginate:         5
+url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
+baseurl:          "" # the subpath of your site, e.g. /blog/
+keywords:         "Kathryn Renee Thomas, Katie Thomas, Katydids, Teachers TV Land"
+
+# Permalinks
+permalink: /:title
+relative_permalinks: true
+
+
+# Build settings
+markdown: kramdown
+include: [".htaccess"]
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+#  style:            :compressed
+
+
+# Navigation
+nav:
+  - title: About
+    url: /about/
+  - title: Teachers
+    url: /teachers/
+  - title: Press
+    url: /press/
+  - title: Media
+    url: /media/
+  - title: Hire Me
+    url: /hire-me/
+  - title: Contact
+    url: /contact/
+
+
+# About / Contact
+authors:
+  katie:
+    name: Kathryn Renee Thomas
+    bio:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, odit voluptas porro beatae eligendi quos illo alias ad. Ut, neque, aut tenetur veritatis nobis voluptas veniam iste id sunt distinctio?
+
+    url:              http://kathrynreneethomas.com
+    email:            kathrynrenee@gmail.com
+    twitter_username: mskathrynrenee
+    img:              http://placehold.it/300
+
+
+# Defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      author: "katie"
+      layout: "post"
+      category: articles
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages" #
+    values:
+      layout: "page"
+
+# Custom Vars
+version:            1.0
+github:
+  repo:

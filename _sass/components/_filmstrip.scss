@@ -1,0 +1,42 @@
+/*!
+*
+* Filmstrip
+*
+*/
+
+.filmstrip{
+  @extend .clearfix;
+
+  width: 100%;
+  margin: auto;
+  background: #eee;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  max-height: 350px;
+
+  ul{
+    float: left;
+    whitespace: nowrap;
+    list-style: none;
+    margin-left: 0;
+    margin-right: -999em;
+    padding: 0;
+  }
+
+  li{
+    margin-right: 15px;
+    float: left;
+    display: inline;
+  }
+
+  img{
+    display: block;
+  }
+
+  span{
+    padding: 10px 0px;
+    display: block;
+  }
+
+}

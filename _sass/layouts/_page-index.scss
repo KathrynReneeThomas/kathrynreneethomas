@@ -1,0 +1,95 @@
+/*!
+*
+* Index Page
+*
+*/
+
+.page-index{
+
+	// Hide header and footer on home page only
+	.site-header{
+		.navbar-brand{
+			display: none;
+		}
+
+		.navbar.navbar-transparent{
+			background: transparent;
+			background-color: transparent;
+		}
+
+	}
+
+
+	.site-footer{
+		display: none;
+	}
+
+//	background-color: #243357;
+//	background-color: #19233B;
+
+	background-color: $white;
+
+	// background-image: url(../img/katie-thomas-headshot-home-a.jpg);
+	// background-repeat: no-repeat;
+	// background-position: 100% 60%;
+	// background-size: cover;
+
+	background-image: url(../img/katie-thomas-headshot-home-b.jpg);
+	background-repeat: no-repeat;
+	background-position: 83% 0%;
+	background-size: cover;
+
+ 	@media (min-width: $screen-sm-min) {
+//		background-size: auto;
+//			background-position: 80% 0%;
+ 	}
+
+ 	@media (min-width: $screen-md-min) {
+//		background-size: auto;
+//			background-position: 80% 0%;
+ 	}
+
+	.site-container{
+		@extend .container-fluid;
+	}
+
+	.site-content{
+		@include make-row();
+	}
+
+		.content-area{
+			@include make-sm-column(6);
+			@include make-md-column(5);
+			@include make-md-column-offset(1);
+
+			color: $kt-orange-dark;
+
+			margin-top: 400px;
+
+		 	@media (min-width: $screen-sm-min) {
+				margin-top: $baseline * 4;
+		 	}
+		}
+
+			.site-main{
+			}
+
+				.display-title{
+					margin-bottom: $baseline * 4;
+				}
+
+				.display-first-name{
+					font-size: 3.3em;
+					letter-spacing: 2px;
+					line-height: 0.9;
+				}
+
+				.display-middle-last-name{
+					font-size: 1.8em;
+					letter-spacing: 1px;
+					line-height: 0.9;
+				}
+
+				article{
+				}
+}

@@ -1,0 +1,70 @@
+<!-- Masthead Gallery -->
+<!-- <section class="masthead masthead-gallery" id="masthead-{{page.title}}">
+
+  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+    {% for image in page.masthead-gallery-images %}
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="{{ image.url_full }}" itemprop="contentUrl" data-size="{{ page.masthead-gallery-dimx }}x{{ page.masthead-gallery-dimy }}">
+            <img src="{{ image.url_thumb }}" itemprop="thumbnail" alt="Image description" />
+        </a>
+        <figcaption itemprop="caption description">{{ image.caption }}</figcaption>
+      </figure>
+    {% endfor %}
+
+  </div>
+
+</section> -->
+
+
+<!-- <section class="masthead masthead-gallery" id="masthead-{{page.title}}">
+
+  <div class="my-gallery">
+
+    <ul class="list-inline">
+    {% for image in page.masthead-gallery-images %}
+      <li>
+        <a href="{{ image.url_full }}" data-size="{{ page.masthead-gallery-dimx }}x{{ page.masthead-gallery-dimy }}">
+            <img src="{{ image.url_thumb }}" alt="Image description" />
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+
+</section> -->
+
+
+<!-- Bootstrap Carousel (Dynamically Generated) -->
+<section class="masthead masthead-gallery" id="masthead-{{page.title}}">
+
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+      {% for image in page.masthead-gallery-images %}
+          <li data-target="#carousel-example-generic" data-slide-to="{{ forloop.index0 }}" {% if forloop.index0 == 0 %}class="active"{% endif %}></li>
+      {% endfor %}
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        {% for image in page.masthead-gallery-images %}
+          <li class="item{% if forloop.index ==1 %} active{% endif %}">
+            <img src="{{ image.url_full }}" class="img-responsive">
+          </li>
+        {% endfor %}
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true">&lsaquo;</span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true">&rsaquo;</span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+
+</section>

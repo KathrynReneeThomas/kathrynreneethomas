@@ -1,0 +1,39 @@
+{% include browser-update.html %}
+
+<header class="site-header" id="site-header" role="banner" {%if page.background-image %} style="background-image: url('{{page.background-image}}');" {% endif %}>
+
+  <!-- Navigation -->
+  <nav id="site-navigation" class="site-navigation navbar navbar-inverse navbar-transparent primary-navbar">
+      <div class="container-fluid">
+
+          <div class="navbar-header">
+              <a class="navbar-brand site-title" href="{{ site.baseurl }}/">{{ site.name }}</a>
+<!--               <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse"> -->
+              <button class="navbar-toggle" type="button" id="trigger-overlay">
+                  <span class="menu-button">Menu</span>
+                  <span class="sr-only">Toggle navigation</span>
+              </button><!-- .navbar-toggle-->
+          </div><!-- .navbar-header-->
+
+          <div class="navbar-collapse collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              {% for page in site.nav %}
+                {% if page.title %}
+                  <li class="menu-item">
+                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div><!-- .navbar-collapse -->
+
+      </div> <!-- .container-fluid -->
+  </nav><!-- .site-navigation -->
+
+  {% if page.masthead-gallery-images %}
+    {% include masthead-gallery.html %}
+  {% elsif page.masthead-image or page.masthead-title or page.masthead-subtitle %}
+    {% include masthead-image.html %}
+  {% endif %}
+
+</header>

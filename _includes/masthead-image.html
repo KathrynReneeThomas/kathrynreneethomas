@@ -1,0 +1,17 @@
+<!-- Masthead -->
+<section class="masthead masthead-img" id="masthead-{{page.title}}">
+
+    {% if page.masthead-image %}
+      <img src="{{page.masthead-image}}">
+    {% endif %}
+
+    {% if page.masthead-title %}
+      <h1 class="masthead-title">{{page.masthead-title}}</h1>
+    {% endif %}
+
+    {% if page.masthead-subtitle %}
+      <hr class="masthead-divider">
+      <p class="masthead-subtitle">{{page.masthead-subtitle}}</p>
+    {% endif %}
+
+</section>

@@ -1,0 +1,330 @@
+/*!
+*
+* Resume Page Layouts
+*
+*/
+
+.page-resume,
+.page-improv-resume{
+
+  .site-container{
+    @extend .container;
+  }
+
+    .site-content{
+      @include make-row();
+    }
+
+      .content-area{
+        @include make-sm-column(12);
+        @include make-sm-column-offset(0);
+      }
+
+        .site-main{
+        }
+
+        .entry-header{
+          display: none;  // Hide auto-generated header
+        }
+
+        .entry-content{
+        }
+
+
+  // Override Width Styles -- might be able to do another way
+  .entry > .entry-header,
+  .entry > .entry-footer,
+  .entry-content > p,
+  .entry-content > h2,
+  .entry-content > h3,
+  .entry-content > h4,
+  .entry-content > ul,
+  .entry-content > figure:not(.figure-wide),
+  .entry-content > .footnotes{
+    @media (min-width: $screen-md-min) {
+      width: 100%;
+    }
+  }
+
+  // Resume Profile
+  .resume-profile{
+    border: 0;
+    @include text-center-left;
+  }
+
+  .resume-profile-header{
+    @include make-sm-column(4);
+    @include make-md-column(3);
+  }
+
+  .resume-profile-body{
+    @include make-sm-column(8);
+    @include make-md-column(9);
+  }
+
+  .resume-profile-title{
+    color: $gray-dark;
+    margin-bottom: 6px;
+  }
+
+  .resume-profile-subtitle{
+    font-family: $font-family-serif;
+    color: $gray-dark;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .resume-profile-intro{
+  }
+
+
+  // Resume Sections General Styles
+  section{
+    @include make-row();
+    border-top: 1px solid #ddd;
+  }
+
+  .resume-section-header{
+    @include make-md-column(3);
+    @include text-center-left;
+  }
+
+  .resume-section-header > h1{
+    font-family: $font-family-sans-serif;
+
+    font-size: $font-size-h4-xs;
+    line-height: $line-height-h4-xs;
+    font-weight: $font-weight-book;
+
+    text-transform: uppercase;
+    color: $gray;
+    letter-spacing: 1px;
+
+    margin-bottom: $baseline;
+    line-height: 1.0;
+
+    @media (min-width: $screen-md-min) {
+        font-size: $font-size-h4-md;
+        line-height: $line-height-h4-md;
+    }
+  }
+
+  // Resume Table of Contents
+  .resume-toc-body{
+    @include text-center-left;
+  }
+
+  .toc-list{
+    @include make-md-column(3);
+    @extend .list-unstyled;
+    margin-bottom: 0;
+
+    a{
+      font-family: $font-family-sans-serif;
+      color: $gray;
+      text-decoration: none;
+
+      &:hover{
+        color: $brand-primary;
+      }
+    }
+  }
+
+
+  // Resume Position Styles
+  .resume-detail-list{
+    @include make-md-column(9);
+    @include make-md-column-offset(0);
+    @extend .list-unstyled;
+  }
+
+  .position{
+    @include make-row();
+    margin-bottom: $baseline * 2;
+  }
+
+  .position-details{
+    @include make-sm-column(10);
+    @include make-md-column(10);
+    @include make-sm-column-pull(2);
+    @include make-md-column-pull(2);
+  }
+
+  .position-title,
+  .publication-title{
+    font-family: $font-family-serif;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-size:        1.3em;
+    line-height:      1.2;
+    margin-bottom:    $baseline-xs / 2;
+
+    @media (min-width: $screen-md-min) {
+      font-size:      1.5em;
+      line-height:    1.2;
+      margin-bottom:  $baseline-md / 2;
+    }
+  }
+
+  .position-organization{
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0px;
+    color: $gray;
+
+    font-size:        1.1em;
+    line-height:      1.2;
+    margin-bottom:    $baseline-xs;
+
+    @media (min-width: $screen-md-min) {
+      font-size:      1.3em;
+      line-height:    1.2;
+      margin-bottom:  $baseline-md;
+    }
+  }
+
+  .position-description,
+  .position-highlights{
+    li{
+    }
+  }
+
+
+  .position-period{
+    @include make-sm-column(2);
+    @include make-md-column(2);
+    @include make-sm-column-push(10);
+    @include make-md-column-push(10);
+
+    @extend .small;
+    color: $gray-light;
+
+    @media (min-width: $screen-xs-min) {
+      text-align: right;
+    }
+  }
+
+
+
+  // Resume Honors & Awards
+    .honor{
+      @extend .small;
+      color: $gray;
+      font-style: italic;
+      font-weight: $font-weight-normal;
+    }
+
+
+  // Education Section
+  .section-education{
+
+  }
+
+  // Experience Section
+  .section-experience{
+
+  }
+
+  // Awards Section
+  .section-awards{
+
+    .awards-wide{
+      @include make-sm-column(7);
+      @include make-md-column(5);
+    }
+
+    .awards-narrow{
+      @include make-sm-column(5);
+      @include make-md-column(4);
+    }
+
+    ul{
+      @extend .list-unstyled;
+
+      li{
+        margin-bottom: $baseline;
+      }
+    }
+  }
+
+  // Resume Publications
+  .section-publications,
+  .section-presentations{
+
+    .publication{
+      margin-bottom: $baseline * 4;
+    }
+
+    .publication-authors{
+      margin-top: 0;
+      margin-bottom: 0;
+      letter-spacing: 0px;
+      color: $gray;
+
+      font-size:        1.0em;
+      line-height:      1.2;
+      margin-bottom:    $baseline-xs;
+
+      @media (min-width: $screen-md-min) {
+        font-size:      1.1em;
+        line-height:    1.2;
+        margin-bottom:  $baseline-md;
+      }
+    }
+
+    .publication-name {
+      font-style: italic;
+      text-transform: none;
+      color: lighten($gray, 20%);
+      font-weight: $font-weight-normal;
+      letter-spacing: 0;
+    }
+
+  }
+
+  // Programming Section
+  .section-programming{
+
+    .programming-list{
+      @include make-xs-column(6);
+      @include make-sm-column(4);
+      @include make-md-column(3);
+    }
+
+    ul{
+      @extend .list-unstyled;
+    }
+  }
+
+  // Skills Section
+  .section-skills{
+    .skills-list{
+      @include make-xs-column(6);
+      @include make-sm-column(4);
+      @include make-md-column(3);
+    }
+
+    ul{
+      @extend .list-unstyled;
+    }
+  }
+
+  // Fun Section
+  .section-fun{
+    .fun-list{
+      @include make-md-column(7);
+    }
+  }
+
+  // References Section
+  .section-references{
+    @include text-center-left;
+
+    .references-list{
+      @include make-md-column(7);
+    }
+  }
+}

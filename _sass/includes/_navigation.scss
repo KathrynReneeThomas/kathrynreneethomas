@@ -1,0 +1,193 @@
+/*!
+*
+* Navigation Styles
+*
+*/
+
+.navbar{
+  z-index: 100; // make sure it stays on top of masthead
+  border: 0;
+//  border-bottom: 1px solid $kt-orange-dark;
+}
+
+.navbar.navbar-transparent{
+  background-color: transparent;
+  background: transparent;
+  border-color: transparent;
+
+//  background-color: rgba(0,0,0,0.7);
+//  background: rgba(0,0,0,0.7);
+
+  background-color: rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.4);
+
+//  background-color: $kt-orange-dark;
+//  background: $kt-orange-dark;
+
+  .navbar-nav > li > a {
+    color: $kt-orange-dark;
+
+//    color: $white;
+  }
+
+  .navbar-brand,
+  .navbar-brand > a {
+    color: $kt-orange-dark;
+  //  color: $white;
+
+  }
+}
+
+.navbar-nav > li > a {
+  font-size: $font-size-base-xs;
+
+  @media (min-width: $screen-md-min) {
+    font-size: $font-size-base-md;
+  }
+}
+
+.navbar-inverse {
+  background: transparent;
+}
+
+.navbar-brand,
+.navbar-brand > a {
+
+  font-size: 22px;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 28px;
+  }
+}
+
+.navbar-toggle{
+  font-size: $font-size-base-xs - 2;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.navbar.navbar-transparent .navbar-toggle {
+  border-color: $kt-orange-dark;
+  color: $kt-orange-dark;
+}
+
+.navbar.navbar-transparent .navbar-toggle:hover,
+.navbar.navbar-transparent .navbar-toggle:focus {
+  background-color: $kt-orange-dark;
+  color: $white;
+}
+
+.site-title{
+  font-family: $font-family-display;
+}
+
+
+/*!
+*
+* Full Screen Overlay
+*
+*/
+
+/* Overlay style */
+
+#trigger-overlay{
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: $brand-primary;
+
+  z-index: 900;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  border: none;
+  background: url(../img/cross.png) no-repeat center center;
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 999;
+}
+
+/* Menu style */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.overlay ul li a {
+  font-size: 54px;
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+  color: $kt-tangerine;
+}
+
+/* Effects */
+
+.overlay-slidedown {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+  transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+}
+
+.overlay-slidedown.open {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
