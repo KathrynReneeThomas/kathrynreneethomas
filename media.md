@@ -43,7 +43,7 @@ permalink: /media/
 </div> -->
 
 
-## Horizontal Scrolling
+## Gallery #1
 
 <div class="filmstrip">
   <ul>
@@ -54,6 +54,31 @@ permalink: /media/
     <li><img src="http://placehold.it/300x300"></li>
   </ul>
 </div>
+
+## Gallery #2
+
+<div class="filmstrip">
+  <ul>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+  </ul>
+</div>
+
+## Gallery #3
+
+<div class="filmstrip">
+  <ul>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+    <li><img src="http://placehold.it/300x300"></li>
+  </ul>
+</div>
+
 
 ## Inline Figures
 
