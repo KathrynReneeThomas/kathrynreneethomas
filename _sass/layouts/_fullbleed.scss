@@ -13,10 +13,13 @@
 			@extend .container-fluid;
 		}
 
-			.site-content{
-			}
+      .site-content{
+//        @include make-row();
+      }
 
-				.content-area{
+        .content-area{
+//        	@include make-sm-column(12);
+//        	@include make-sm-column-offset(0);
 				}
 
 					.site-main{

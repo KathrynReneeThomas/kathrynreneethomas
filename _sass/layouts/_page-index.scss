@@ -6,33 +6,7 @@
 
 .page-index{
 
-	// Hide header and footer on home page only
-	.site-header{
-		.navbar-brand{
-			display: none;
-		}
-
-		.navbar.navbar-transparent{
-			background: transparent;
-			background-color: transparent;
-		}
-
-	}
-
-
-	.site-footer{
-		display: none;
-	}
-
-//	background-color: #243357;
-//	background-color: #19233B;
-
 	background-color: $white;
-
-	// background-image: url(../img/katie-thomas-headshot-home-a.jpg);
-	// background-repeat: no-repeat;
-	// background-position: 100% 60%;
-	// background-size: cover;
 
 	background-image: url(../img/katie-thomas-headshot-home-b.jpg);
 	background-repeat: no-repeat;
@@ -40,14 +14,54 @@
 	background-size: cover;
 
  	@media (min-width: $screen-sm-min) {
-//		background-size: auto;
-//			background-position: 80% 0%;
+	// background-size: auto;
+	// background-position: 80% 0%;
  	}
 
  	@media (min-width: $screen-md-min) {
-//		background-size: auto;
-//			background-position: 80% 0%;
+	// background-size: auto;
+	// background-position: 80% 0%;
  	}
+
+	// Hide header and footer on home page only
+	.site-header{
+		.navbar-brand{
+			display: none;
+		}
+
+	  .navbar-nav > li > a {
+
+	    @media (min-width: $screen-sm-min) {
+		    color: $gray-light;
+	    	&:hover{
+	    		color: $kt-orange-dark;
+	    	}
+
+	    }
+	  }
+
+		.navbar.navbar-transparent{
+			background: transparent;
+			background-color: transparent;
+			border-color: transparent;
+		}
+
+		.navbar.navbar-transparent .navbar-toggle {
+		  border-color: $kt-orange-dark;
+		  color: $kt-orange-dark;
+
+		  &:hover,
+		  &:focus{
+		    background-color: $kt-orange-dark;
+		    color: $white;
+		  }
+		}
+	}
+
+	.site-footer{
+		display: none;
+	}
+
 
 	.site-container{
 		@extend .container-fluid;
@@ -62,7 +76,7 @@
 			@include make-md-column(5);
 			@include make-md-column-offset(1);
 
-			color: $kt-orange-dark;
+//			color: $kt-orange-dark;
 
 			margin-top: 400px;
 
@@ -76,6 +90,7 @@
 
 				.display-title{
 					margin-bottom: $baseline * 4;
+					color: $kt-orange-dark;
 				}
 
 				.display-first-name{
