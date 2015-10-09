@@ -1,0 +1,249 @@
+/*!
+*
+* Hire Me / Resume Page Layouts
+*
+*/
+
+.page-hire-me{
+
+  .site-container{
+//    @extend .container-fluid;
+  }
+
+    .site-content{
+//      @include make-row();
+    }
+
+      .content-area{
+//        @include make-sm-column(12);
+//        @include make-sm-column-offset(0);
+      }
+
+        .site-main{
+        }
+
+        .entry-header.post-header{
+          display: none;
+        }
+
+        .entry-content{
+        }
+
+
+// Intro Section
+
+#section-intro{
+  text-align: center;
+}
+
+// Reel Section
+
+#section-reel{
+  text-align: center;
+  color: $gray-light;
+}
+
+
+// Resume
+
+// Resume Profile
+  .resume-profile{
+//    border: 0;
+//    @include text-center-left;
+  }
+
+  .resume-profile-header{
+    text-align: center;
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline;
+    border-bottom: 1px solid $gray-lighter;
+
+//    @include make-row();
+  }
+
+  .resume-profile-photo{
+    margin-bottom: $baseline * 2;
+//    @include make-md-column(3);
+  }
+
+  .resume-profile-title{
+//    @include make-md-column(9);
+  }
+
+  .resume-profile-details{
+    @include make-row();
+  }
+
+  .resume-profile-management{
+    @include make-xs-column(12);
+    @include make-xs-column-offset(0);
+
+    @include make-sm-column(4);
+    @include make-sm-column-offset(0);
+
+    @include make-md-column(4);
+    @include make-md-column-offset(0);
+
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+
+  }
+
+  .resume-profile-personal{
+    @include make-xs-column(12);
+    @include make-xs-column-offset(0);
+
+    @include make-sm-column(3);
+    @include make-sm-column-offset(0);
+
+    @include make-md-column(3);
+    @include make-md-column-offset(0);
+
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+  }
+
+  .resume-profile-additional{
+    @include make-xs-column(12);
+    @include make-xs-column-offset(0);
+
+    @include make-sm-column(3);
+    @include make-sm-column-offset(0);
+
+    @include make-md-column(3);
+    @include make-md-column-offset(0);
+
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+  }
+
+
+  .resume-profile-subtitle{
+//    font-family: $font-family-serif;
+//    color: $gray-dark;
+//    text-transform: none;
+//    letter-spacing: 0;
+  }
+
+  .resume-profile-intro{
+  }
+
+
+  // Resume Sections General Styles
+  .resume-section{
+    @include make-row();
+  }
+
+  .resume-section-header,
+  .resume-profile-header{
+    @include make-sm-column(12);
+  }
+
+  .resume-section-header{
+    @extend .h4;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    margin-top: $baseline * 2;
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline;
+
+    border-bottom: 1px solid $gray-lighter;
+
+    color: $brand-primary;
+    letter-spacing: 2px;
+
+  }
+
+
+// General Resume Entry Styles
+
+  .resume-detail-list{
+    @include make-md-column(12);
+    @include make-md-column-offset(0);
+    @extend .list-unstyled;
+  }
+
+  .resume-gig,
+  .resume-training,
+  .resume-award{
+    @include make-row();
+    margin-bottom: $baseline;
+  }
+
+
+// Gig-Specific Styles
+
+  .resume-gig-title{
+    @include make-sm-column(4);
+    font-weight: $font-weight-bold;
+  }
+
+  .resume-gig-role{
+    @include make-sm-column(3);
+  }
+
+  .resume-gig-production-team{
+    @include make-sm-column(5);
+  }
+
+
+// Training-Specific Styles
+
+.resume-training-title{
+  @include make-sm-column(4);
+  font-weight: $font-weight-bold;
+}
+
+.resume-training-details{
+  @include make-sm-column(8);
+}
+
+
+// Skill-Specific Styles
+
+.resume-skill-list{
+  @extend .list-inline;
+
+  li{
+    padding-left: 0;
+    padding-right: 2px;
+  }
+
+  li:after{
+    content: ", ";
+  }
+
+li:last-child:after{
+    content: "";
+  }
+}
+
+// Award-Specific Styles
+
+.resume-award-list{
+  @extend .list-unstyled;
+}
+
+.resume-award{
+}
+
+.resume-award-title {
+  @include make-sm-column(4);
+  font-weight: $font-weight-bold;
+}
+
+.resume-award-details {
+  @include make-sm-column(8);
+}
+
+}
