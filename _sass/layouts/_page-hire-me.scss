@@ -34,6 +34,7 @@
 
 #section-intro{
   text-align: center;
+  padding-top: $baseline * 2;
 }
 
 // Reel Section
@@ -44,12 +45,10 @@
 }
 
 
+
 // Resume
 
-// Resume Profile
   .resume-profile{
-//    border: 0;
-//    @include text-center-left;
   }
 
   .resume-profile-header{
@@ -57,17 +56,13 @@
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline;
     border-bottom: 1px solid $gray-lighter;
-
-//    @include make-row();
   }
 
   .resume-profile-photo{
     margin-bottom: $baseline * 2;
-//    @include make-md-column(3);
   }
 
   .resume-profile-title{
-//    @include make-md-column(9);
   }
 
   .resume-profile-details{
@@ -93,7 +88,7 @@
   }
 
   .resume-profile-personal{
-    @include make-xs-column(12);
+    @include make-xs-column(6);
     @include make-xs-column-offset(0);
 
     @include make-sm-column(3);
@@ -102,7 +97,7 @@
     @include make-md-column(3);
     @include make-md-column-offset(0);
 
-    text-align: center;
+    text-align: left;
 
     @media (min-width: $screen-sm-min) {
       text-align: left;
@@ -110,7 +105,7 @@
   }
 
   .resume-profile-additional{
-    @include make-xs-column(12);
+    @include make-xs-column(6);
     @include make-xs-column-offset(0);
 
     @include make-sm-column(3);
@@ -119,7 +114,7 @@
     @include make-md-column(3);
     @include make-md-column-offset(0);
 
-    text-align: center;
+//    text-align: right;
 
     @media (min-width: $screen-sm-min) {
       text-align: left;
@@ -127,25 +122,14 @@
   }
 
 
-  .resume-profile-subtitle{
-//    font-family: $font-family-serif;
-//    color: $gray-dark;
-//    text-transform: none;
-//    letter-spacing: 0;
-  }
-
-  .resume-profile-intro{
-  }
-
-
-  // Resume Sections General Styles
+// Resume Sections General Styles
   .resume-section{
     @include make-row();
   }
 
   .resume-section-header,
   .resume-profile-header{
-    @include make-sm-column(12);
+//    @include make-sm-column(12);
   }
 
   .resume-section-header{
@@ -153,7 +137,7 @@
     text-transform: uppercase;
     line-height: 1.2;
 
-    margin-top: $baseline * 2;
+    margin-top: $baseline * 4;
     margin-bottom: $baseline * 2;
     padding-bottom: $baseline;
 
@@ -168,8 +152,8 @@
 // General Resume Entry Styles
 
   .resume-detail-list{
-    @include make-md-column(12);
-    @include make-md-column-offset(0);
+//    @include make-md-column(12);
+//    @include make-md-column-offset(0);
     @extend .list-unstyled;
   }
 

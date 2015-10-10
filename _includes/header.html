@@ -3,7 +3,7 @@
 <header class="site-header" id="site-header" role="banner" {%if page.background-image %} style="background-image: url('{{page.background-image}}');" {% endif %}>
 
   <!-- Navigation -->
-  <nav id="site-navigation" class="site-navigation navbar navbar-inverse navbar-transparent primary-navbar">
+  <nav id="site-navigation" class="site-navigation navbar navbar-transparent primary-navbar">
       <div class="container-fluid">
 
           <div class="navbar-header">
@@ -16,10 +16,11 @@
 
           <div class="navbar-collapse collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
+              {% assign url = page.url|remove:'index.html' %}
               {% for page in site.nav %}
                 {% if page.title %}
-                  <li class="menu-item">
-                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                  <li class="menu-item{% if url == page.url %} active{% endif %}">
+                    <a class="page-link" href="{{ page.url | prepend: site.baseurl }}" title="{{page.title}}">{{ page.title }}</a>
                   </li>
                 {% endif %}
               {% endfor %}

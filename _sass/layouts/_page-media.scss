@@ -24,6 +24,10 @@
             article{
             }
 
+              .entry-header-container{
+                @extend .container;
+              }
+
               .entry-header{
 //                margin-top: $baseline * 4;
 
@@ -32,8 +36,35 @@
                 }
               }
 
-              hr + h2{
+              .section-header{
+                margin-bottom: $baseline * 2;
+              }
+
+              h4{
+                margin-bottom: 0;
                 margin-top: $baseline * 4;
+                text-align: center;
+              }
+
+              .gallery-list{
+                @include make-sm-column(6);
+
+                ul{
+                  @include make-xs-column(6);
+                  @extend .list-unstyled;
+                  margin-bottom: $baseline
+                }
+              }
+
+              .gallery-list-photos{
+              }
+
+              .gallery-list-videos{
+              }
+
+              hr{
+                margin-top: $baseline;
+                border-color: $gray-lighter;
               }
 
               .my-gallery{
@@ -65,5 +96,6 @@
               }
 
               .figure-video{
+                margin-top: $baseline;
               }
 }

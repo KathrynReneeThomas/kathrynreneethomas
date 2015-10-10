@@ -21,10 +21,25 @@ section{
 
   @media (min-width: $screen-lg-min) {
   }
+
+  &.section-slim{
+    padding-top: $baseline-xs;
+    padding-bottom: $baseline-xs;
+
+    @media (min-width: $screen-md-min) {
+      padding-top: $baseline-md;
+      padding-bottom: $baseline-md;
+    }
+  }
+
 }
 
 .section-container{
   @extend .container;
+}
+
+.section-container-fluid{
+  @extend .container-fluid;
 }
 
 .section-body{
@@ -61,7 +76,7 @@ section{
   }
 
   @media (min-width: $screen-md-min) {
-    max-width: 24em;
+    max-width: 26em;
   }
 
   @media (min-width: $screen-lg-min) {
@@ -79,4 +94,8 @@ section{
     margin-top: $baseline * 2;
     margin-bottom: $baseline * 2;
   }
+}
+
+.section-footer{
+
 }

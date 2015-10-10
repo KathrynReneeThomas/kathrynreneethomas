@@ -110,6 +110,10 @@ body{
 .entry-media{
 }
 
+hr + h2{
+  margin-top: $baseline * 4;
+}
+
 
 // Figures
 
@@ -159,16 +163,20 @@ figure{
   font-size: $font-size-small;
   color: $gray-light;
   text-decoration: none;
-  @extend .pull-right;
   line-height: 1;
   margin-top: $baseline / 2 + 2;
   margin-bottom: $baseline / 2 + 2;
   vertical-align: middle;
   font-weight: $font-weight-normal;
 
+  display: none; // Hide on small screens
+
   @media (min-width: $screen-md-min) {
     margin-top: $baseline + 4;
     margin-bottom: $baseline + 4;
+
+    display: block;
+
   }
 }
 

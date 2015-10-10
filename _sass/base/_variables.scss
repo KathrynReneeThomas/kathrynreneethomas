@@ -121,7 +121,7 @@ $font-size-h3-xs:           1.375em;
 $line-height-h3-xs:         1.25;
 
 $font-size-h4-xs:           1.125em;
-$line-height-h4-xs:         1.111111;
+$line-height-h4-xs:         1.3;
 
 $font-size-lead-xs:         1.11111em;
 $line-height-lead-xs:       1.4;
@@ -144,7 +144,7 @@ $font-size-h3-sm:           1.375em;
 $line-height-h3-sm:         1.25;
 
 $font-size-h4-sm:           1.125em;
-$line-height-h4-sm:         1.111111;
+$line-height-h4-sm:         1.3;
 
 $font-size-lead-sm:         1.11111em;
 $line-height-lead-sm:       1.4;
@@ -167,7 +167,7 @@ $font-size-h3-md:           1.5em;
 $line-height-h3-md:         1.25;
 
 $font-size-h4-md:           1.125em;
-$line-height-h4-md:         1.222222;
+$line-height-h4-md:         1.3;
 
 $font-size-lead-md:         1.4em;
 $line-height-lead-md:       1.4;
@@ -190,7 +190,7 @@ $font-size-h3-lg:           1.75em;
 $line-height-h3-lg:         1.25;
 
 $font-size-h4-lg:           1.125em;
-$line-height-h4-lg:         1.25;
+$line-height-h4-lg:         1.3;
 
 $font-size-lead-lg:         1.4em;
 $line-height-lead-lg:       1.4;
@@ -200,7 +200,6 @@ $line-height-blockquote-lg: 1.458333333;
 
 $font-size-large-lg:        1.2em;
 $font-size-small-lg:        0.88888em;
-
 
 
 //** Navbar
@@ -218,6 +217,38 @@ $fixed-navbar-offset:         $navbar-height;
 
 // Breakpoints
 $screen-xl-min:               1400px;
+
+
+//** Transparent Navbar Variables
+
+$navbar-transparent-bg-xs:                $brand-primary;
+$navbar-transparent-bg:                   transparent;
+$navbar-transparent-border:               transparent;
+
+$navbar-transparent-brand-color-xs:       $white;
+$navbar-transparent-brand-hover-color-xs: $gray-lighter;
+
+$navbar-transparent-brand-color:          $brand-primary;
+$navbar-transparent-brand-hover-color:    darken($brand-primary, 10%);
+$navbar-transparent-brand-hover-bg:       transparent;
+
+$navbar-transparent-color:                $white;
+$navbar-transparent-link-color-xs:        $white;
+$navbar-transparent-link-color:           $gray-light;
+$navbar-transparent-link-hover-color:     $brand-primary;
+$navbar-transparent-link-hover-bg:        transparent;
+
+$navbar-transparent-link-active-color:    $brand-primary;
+$navbar-transparent-link-active-bg:       transparent;
+
+$navbar-transparent-link-disabled-color:  $gray-light;
+$navbar-transparent-link-disabled-bg:     transparent;
+
+$navbar-transparent-toggle-color:         $white;
+$navbar-transparent-toggle-hover-color:   $brand-primary;
+$navbar-transparent-toggle-border-color:  $white;
+$navbar-transparent-toggle-hover-bg:      $white;
+$navbar-transparent-toggle-icon-bar-bg:   $brand-primary;
 
 
 //== Components
