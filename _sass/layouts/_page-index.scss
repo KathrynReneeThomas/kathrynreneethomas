@@ -6,21 +6,30 @@
 
 .page-index{
 
-	background-color: $white;
-
-	background-image: url(../img/katie-thomas-headshot-home-b.jpg);
-	background-repeat: no-repeat;
-	background-position: 83% 0%;
-	background-size: cover;
+	background: none;
 
  	@media (min-width: $screen-sm-min) {
-	// background-size: auto;
-	// background-position: 80% 0%;
+		background-image: url(../img/kathryn-renee-thomas-headshot-home.jpg);
+		background-repeat: no-repeat;
+
+		background-position: -125px 25px;
+		background-size: auto 1024px;
+
+//		background-size: auto 100vh;
  	}
 
  	@media (min-width: $screen-md-min) {
-	// background-size: auto;
-	// background-position: 80% 0%;
+//		background-position:  5vw 25px;
+		background-position:  0px 25px;
+		background-size: auto 1024px;
+ 	}
+
+ 	@media (min-width: $screen-lg-min) {
+		background-position: 100% 25px;
+		background-size: 1200px auto;
+ 	}
+
+ 	@media (min-width: 1440px) {
  	}
 
 	// Hide header and footer on home page only
@@ -39,7 +48,6 @@
 
 	    }
 	  }
-
 		.navbar.navbar-transparent{
 			background: transparent;
 			background-color: transparent;
@@ -59,52 +67,178 @@
 	}
 
 	.site-footer{
-		display: none;
+	 	@media (min-width: $screen-sm-min) {
+			display: none;
+		}
 	}
 
-
 	.site-container{
-		@extend .container-fluid;
+//		@extend .container-fluid;
 	}
 
 	.site-content{
-		@include make-row();
+//		@include make-row();
 	}
 
-		.content-area{
-			@include make-sm-column(6);
-			@include make-md-column(5);
-			@include make-md-column-offset(1);
+		.home-primary{
+			background-image: url(../img/kathryn-renee-thomas-headshot-home.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 0px;
 
-//			color: $kt-orange-dark;
+			position: relative;
 
-			margin-top: 400px;
+			height: 100vh;
+			// min-height: 500px;
+
+			padding-bottom: $baseline * 2;
+			margin-top: -51px;
 
 		 	@media (min-width: $screen-sm-min) {
-				margin-top: $baseline * 4;
+		 		background: none;
+				margin-top: 0px;
+				height: auto;
+
+				margin-bottom: $baseline * 4;
 		 	}
 		}
 
-			.site-main{
+		.home-primary-content{
+
+			@include make-xs-column(10);
+			@include make-xs-column-offset(1);
+
+			@include make-sm-column(5);
+			@include make-sm-column-offset(0);
+
+			@include make-md-column(5);
+			@include make-md-column-offset(0);
+
+			@include make-lg-column(5);
+			@include make-lg-column-offset(0);
+
+//			margin-top: 45vh;
+
+			text-align: center;
+
+			position: absolute;
+			bottom: 5vh;
+
+		 	@media (min-width: $screen-sm-min) {
+				text-align: left;
+				margin-top: 0;
+				position: relative;
+				top: 5vh;
+		 	}
+
+
+		.display-title{
+			color: $kt-orange-dark;
+			margin-bottom: 0;
+		}
+
+		.display-first-name{
+			font-size: 3.2em;
+			letter-spacing: -2px;
+			line-height: 0.9;
+			display: block;
+			margin-bottom: -45px;
+
+		 	@media (min-width: $screen-sm-min) {
+		 		display: inline;
+		 		margin-bottom: 0;
+		 	}
+
+		 	@media (min-width: $screen-md-min) {
+		 		font-size: 3.0em;
+		 	}
+
+		 	@media (min-width: $screen-lg-min) {
+		 	}
+		}
+
+		.display-middle-last-name{
+			font-size: 1.8em;
+			letter-spacing: -1px;
+			line-height: 1;
+
+		 	@media (min-width: $screen-sm-min) {
+		 	}
+
+		 	@media (min-width: $screen-md-min) {
+				font-size: 1.85em;
+		 	}
+
+		 	@media (min-width: $screen-lg-min) {
+				font-size: 1.85em;
+		 	}
+
+		}
+
+			p.lead{
+				@extend .h3;
+				font-family: $font-family-sans-serif;
+				font-weight: $font-weight-light;
+				margin-top: $baseline;
+				margin-bottom: $baseline;
+				color: $white;
+
+			  -webkit-hyphens: none;
+			  -moz-hyphens: none;
+			  -ms-hyphens: none;
+			  hyphens: none;
+
+			 	@media (min-width: $screen-sm-min) {
+			 		color: $gray;
+					margin-bottom: $baseline * 2;
+			 	}
 			}
+		}
 
-				.display-title{
-					margin-bottom: $baseline * 4;
-					color: $kt-orange-dark;
+		.home-secondary-content{
+			@include make-xs-column(10);
+			@include make-xs-column-offset(1);
+
+			@include make-sm-column(4);
+			@include make-sm-column-offset(0);
+
+			@include make-md-column(3);
+			@include make-md-column-offset(0);
+
+			@include make-lg-column(3);
+			@include make-lg-column-offset(0);
+
+			margin-top: $baseline * 2;
+
+			color: $gray;
+
+			hr{
+				margin-left: 0;
+				margin-bottom: $baseline * 2;
+				border-color: $gray-lighter;
+
+			 	@media (min-width: $screen-sm-min) {
+					max-width: 30%;
 				}
 
-				.display-first-name{
-					font-size: 3.3em;
-					letter-spacing: 2px;
-					line-height: 0.9;
-				}
+			}
+		}
 
-				.display-middle-last-name{
-					font-size: 1.8em;
-					letter-spacing: 1px;
-					line-height: 0.9;
-				}
+		.home-tertiary-content{
+			@include make-xs-column(10);
+			@include make-xs-column-offset(1);
 
-				article{
-				}
+			@include make-sm-column(4);
+			@include make-sm-column-offset(0);
+
+			@include make-md-column(4);
+			@include make-md-column-offset(0);
+
+			@include make-lg-column(3);
+			@include make-lg-column-offset(0);
+
+			.union-affiliations{
+			}
+		}
+
 }
