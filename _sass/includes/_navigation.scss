@@ -169,6 +169,28 @@
 
 }
 
+/*!
+*
+* Subnavigation
+*
+*/
+
+.subnav{
+  @extend .list-inline;
+  color: $gray-light;
+
+  padding-bottom: $baseline * 2;
+  border-bottom: 1px solid $gray-lighter;
+
+  li{
+    margin-bottom: 0 !important;
+  }
+
+}
+
+
+
+
 
 /*!
 *

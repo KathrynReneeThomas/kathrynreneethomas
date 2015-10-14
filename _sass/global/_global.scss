@@ -73,16 +73,17 @@ body{
 
 .entry > .entry-header,
 .entry > .entry-footer,
-.entry-content > .row,
-.entry-content > p,
-.entry-content > h2,
-.entry-content > h3,
-.entry-content > h4,
-.entry-content > ul,
-.entry-content > hr,
-.entry-content > figure:not(.figure-wide),
-.entry-content > .btn-block,
-.entry-content > .footnotes{
+.entry-content > .row, .entry-content > .entry-section > .row,
+.entry-content > p, .entry-content > .entry-section > p,
+.entry-content > header, .entry-content > .entry-section > header,
+.entry-content > h2, .entry-content > .entry-section > h2,
+.entry-content > h3, .entry-content > .entry-section > h3,
+.entry-content > h4, .entry-content > .entry-section > h4,
+.entry-content > ul, .entry-content > .entry-section > ul,
+.entry-content > hr, .entry-content > .entry-section > hr,
+.entry-content > figure:not(.figure-wide), .entry-content > .entry-section > figure:not(.figure-wide),
+.entry-content > .btn-block, .entry-content > .entry-section > .btn-block,
+.entry-content > .footnotes, .entry-content > .entry-section > .footnotes {
 
   @media (min-width: $screen-sm-min) {
     width: 83.33333%;
@@ -177,6 +178,17 @@ figure{
 
     display: block;
 
+  }
+}
+
+
+// Lists
+
+.list-social-links{
+  @extend .list-unstyled;
+
+  a{
+    text-decoration: none;
   }
 }
 
