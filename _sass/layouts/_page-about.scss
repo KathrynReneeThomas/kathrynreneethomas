@@ -5,16 +5,16 @@
 */
 
 .page-about{
-  // .site-header{
-  //   background-position: 60% 100%;
-  //   background-size: 1600px;
-  //   height: 675px;
-  //   border-bottom: 1px solid #dd9833;
-  //   margin-bottom: 27px;
-  // }
 
-.site-wrapper{
+  .masthead{
+    @extend .masthead-navbar-overlap;
   }
+
+  .masthead.masthead-background-image{
+  }
+
+  .site-wrapper{
+    }
 
     .site-container{
       @extend .container;

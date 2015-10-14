@@ -30,6 +30,87 @@
         }
 
 
+// Masthead
+.masthead.masthead-partitions{
+
+  background: $brand-primary;
+
+  .masthead-container{
+    @extend .container-fluid;
+  }
+
+  .masthead-body{
+    @include make-row();
+  }
+
+  .masthead-partition-content{
+    @include make-sm-column(6);
+    @include make-sm-column-pull(6);
+
+    h1, h2{
+    color: $white;
+    }
+
+    .lead{
+      color: $white;
+      font-weight: $font-weight-light;
+    }
+
+    .masthead-partition-message{
+
+      padding-top: $baseline * 2;
+      padding-bottom: $baseline;
+
+      @media (min-width: $screen-sm-min) {
+        padding-top: $baseline * 2;
+        padding-bottom: $baseline;
+//        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @media (min-width: $screen-md-min) {
+        padding-top: $baseline * 4;
+        padding-bottom: $baseline;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        padding-top: $baseline * 6;
+        padding-bottom: $baseline;
+      }
+
+    }
+
+    .subnav{
+      @extend .list-inline;
+      color: $white;
+      border-top: 1px solid darken($brand-primary, 10%);
+      padding-top: $baseline;
+
+      li{
+        margin-right: 15px;
+      }
+      a{
+        color: $white;
+      }
+    }
+
+  }
+
+  .masthead-partition-image{
+    @include make-sm-column(6);
+    @include make-sm-column-push(6);
+
+    padding-left: 0;
+    padding-right: 0;
+
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
 // Intro Section
 
 #section-intro{
@@ -41,7 +122,7 @@
 
 #section-reel{
   text-align: center;
-  color: $gray-light;
+//  color: $gray-light;
 }
 
 

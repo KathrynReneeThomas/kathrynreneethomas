@@ -2,7 +2,6 @@
 
 <header class="site-header" id="site-header" role="banner" {%if page.background-image %} style="background-image: url('{{page.background-image}}');" {% endif %}>
 
-  <!-- Navigation -->
   <nav id="site-navigation" class="site-navigation navbar navbar-transparent primary-navbar">
       <div class="container-fluid">
 
@@ -11,8 +10,8 @@
               <button class="navbar-toggle" type="button" id="trigger-overlay">
                   <span class="menu-button">Menu</span>
                   <span class="sr-only">Toggle navigation</span>
-              </button><!-- .navbar-toggle-->
-          </div><!-- .navbar-header-->
+              </button>
+          </div>
 
           <div class="navbar-collapse collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
@@ -25,15 +24,11 @@
                 {% endif %}
               {% endfor %}
             </ul>
-          </div><!-- .navbar-collapse -->
+          </div>
 
-      </div> <!-- .container-fluid -->
-  </nav><!-- .site-navigation -->
+      </div>
+  </nav>
 
-  {% if page.masthead-gallery-images %}
-    {% include masthead-gallery.html %}
-  {% elsif page.masthead-image or page.masthead-title or page.masthead-subtitle %}
-    {% include masthead-image.html %}
-  {% endif %}
+  {% include masthead.html %}
 
 </header>

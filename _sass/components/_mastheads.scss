@@ -5,8 +5,6 @@
 */
 
 .masthead{
-	position: relative;
-
 	@extend .text-center;
 	padding-top: $baseline * 2 * 0;
 	padding-bottom: 0;
@@ -14,8 +12,6 @@
 	@media (min-width: $screen-sm-min) {
 		padding-top: $baseline * 4 * 0;
 		padding-bottom: 0;
-		top: -54px;
-		margin-bottom: -54px;
 	}
 
 	@media (min-width: $screen-md-min) {
@@ -87,33 +83,112 @@
 .masthead-button{
 }
 
-.masthead-img > img{
-	width: 100%;
-	height: auto;
-}
+.masthead-navbar-overlap{
+    position: relative;
 
-.masthead-img{
+    @media (min-width: $screen-sm-min) {
+      top: -54px; // ~ Navbar height
+      margin-bottom: -54px; // Navbar height
+    }
+  }
+
+.masthead.masthead-featured-image{
 	padding-bottom: $baseline * 0;
 
 	@media (min-width: $screen-sm-min) {
 		padding-bottom: $baseline * 2 * 0;
 	}
+
+	.masthead-figure{
+		margin-top: 0;
+		margin-bottom: 0;
+		min-height: 288px;
+//		max-height: 576px;
+		overflow: hidden;
+		position: relative;
+
+		height: 288px;
+
+    @media (min-width: $screen-sm-min) {
+ 			height: 576px;
+    }
+
+    @media (min-width: $screen-md-min) {
+
+    }
+
+    @media (min-width: $screen-lg-min) {
+ 			height: 720px;
+    }
+
+	}
+
+	img{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		width: 100%;
+		height: auto;
+	}
+
 }
+
+
+.masthead.masthead-background-image{
+	background-size: cover;
+
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: 56.25%;
+  }
+
+		height: 288px;
+
+    @media (min-width: $screen-sm-min) {
+ 			height: 576px;
+    }
+
+    @media (min-width: $screen-md-min) {
+    }
+
+    @media (min-width: $screen-lg-min) {
+// 			height: 720px;
+// 			background-size: cover;
+    }
+}
+
 
 
 // Masthead Gallery
 
-.masthead-gallery{
+.masthead.masthead-gallery{
 	@extend .clearfix;
 
 	.carousel-indicators {
 		bottom: -10px;
 	}
 
-
 	.my-gallery{
 		figure{
 		}
 	}
+}
 
+
+// Masthead Partitions
+.masthead.masthead-partitions{
+
+	.masthead-partition-content{
+		text-align: left;
+	}
+
+	.masthead-partition-image{
+		padding: 0;
+	}
 }

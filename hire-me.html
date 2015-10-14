@@ -7,27 +7,34 @@ meta_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inv
 title: Hello, Casting Directors and Directors!
 permalink: /hire-me/
 
-masthead-image: "http://127.0.0.1:4000/img/mastheads/masthead-hire-a.jpg"
+#masthead-image: "http://127.0.0.1:4000/img/mastheads/masthead-hire-a.jpg"
+
+#masthead-partition-a: Content for Partition A
+#masthead-partition-b: http://placehold.it/600x600
+
+masthead:
+  type:           partitions
+  headline:       "Hello, Casting Directors!"
+  subheadline:    "I'd love to come in and read for you!"
+  details:        "I'm seeking opportunities in both comedy and drama, so please call me in for your next exciting project."
+  featured-image: http://127.0.0.1:4000/img/mastheads/partition-hire-me.jpg
+
+  subnav:
+    - text:   View Reel
+      anchor: "#"
+    - text:   View Resume
+      anchor: "#"
+
+  gallery:
+    - title: image-a
+      url:   http://placehold.it/300
+    - title: image-b
+      url:   http://placehold.it/300
+    - title: image-c
+      url:   http://placehold.it/300
 ---
 
-<section id="section-intro">
-  <div class="section-container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-
-        <header class="entry-header">
-          <h1 class="entry-title">Hello, Casting Directors!</h1>
-        </header>
-
-        <p class="lead">Gosh, I'd love to come in and read for you!</p>
-
-        <p class="lead">I'm seeking opportunities in comedy and drama, so please call me in for your next exciting project.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="section-reel" class="bg-dark">
+<section id="section-reel">
   <div class="section-container">
 
     <header>
