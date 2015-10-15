@@ -44,8 +44,14 @@
   }
 
   .masthead-partition-content{
-    @include make-sm-column(6);
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+
+    @include make-sm-column(4);
+    @include make-sm-column-offset(1);
     @include make-sm-column-pull(6);
+
+    position: relative;
 
     h1, h2{
     color: $white;
@@ -58,33 +64,40 @@
 
     .masthead-partition-message{
 
-      padding-top: $baseline * 2;
-      padding-bottom: $baseline;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
 
-      @media (min-width: $screen-sm-min) {
-        padding-top: $baseline * 2;
-        padding-bottom: $baseline;
-//        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+//       padding-top: $baseline * 2;
+//       padding-bottom: $baseline;
 
-      @media (min-width: $screen-md-min) {
-        padding-top: $baseline * 4;
-        padding-bottom: $baseline;
-      }
+//       @media (min-width: $screen-sm-min) {
+//         padding-top: $baseline * 2;
+//         padding-bottom: $baseline;
+// //        width: 80%;
+//         margin-left: auto;
+//         margin-right: auto;
+//       }
 
-      @media (min-width: $screen-lg-min) {
-        padding-top: $baseline * 6;
-        padding-bottom: $baseline;
-      }
+//       @media (min-width: $screen-md-min) {
+//         padding-top: $baseline * 6;
+//         padding-bottom: $baseline;
+//       }
+
+//       @media (min-width: $screen-lg-min) {
+//       }
 
     }
 
     .subnav{
       @extend .list-inline;
       color: $white;
-      border-top: 1px solid darken($brand-primary, 10%);
+      border-top: 1px solid;
+      border-bottom: 0;
+      border-color: darken($brand-primary, 10%);
+
       padding-top: $baseline;
 
       li{
@@ -103,11 +116,6 @@
 
     padding-left: 0;
     padding-right: 0;
-
-    img{
-      width: 100%;
-      height: auto;
-    }
   }
 }
 
@@ -144,6 +152,12 @@
   }
 
   .resume-profile-title{
+  }
+
+  .resume-profile-download{
+    a{
+      text-decoration: none;
+    }
   }
 
   .resume-profile-details{

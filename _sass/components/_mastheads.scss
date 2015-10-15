@@ -186,9 +186,49 @@
 
 	.masthead-partition-content{
 		text-align: left;
+
+    height: 288px;
+
+    @media (min-width: $screen-sm-min) {
+      height: 576px;
+    }
+
+    @media (min-width: $screen-md-min) {
+    }
+
+    @media (min-width: $screen-lg-min) {
+    }
+
 	}
 
 	.masthead-partition-image{
 		padding: 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: 90%;
+    }
+
+
+    height: 288px;
+
+    @media (min-width: $screen-sm-min) {
+      height: 576px;
+    }
+
+    @media (min-width: $screen-md-min) {
+    }
+
+    @media (min-width: $screen-lg-min) {
+//      height: 720px;
+//      background-size: cover;
+    }
+
+
 	}
 }
