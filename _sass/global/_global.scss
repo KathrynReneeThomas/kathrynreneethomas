@@ -20,12 +20,7 @@ body{
 }
 
 .container {
-    height:100%;
-}
-
-img{
-  max-width: 100%;
-  height: auto;
+  height:100%;
 }
 
 /*!
@@ -78,13 +73,17 @@ img{
 
 .entry > .entry-header,
 .entry > .entry-footer,
-.entry-content > p,
-.entry-content > h2,
-.entry-content > h3,
-.entry-content > h4,
-.entry-content > ul,
-.entry-content > figure:not(.figure-wide),
-.entry-content > .footnotes{
+.entry-content > .row, .entry-content > .entry-section > .row,
+.entry-content > p, .entry-content > .entry-section > p,
+.entry-content > header, .entry-content > .entry-section > header,
+.entry-content > h2, .entry-content > .entry-section > h2,
+.entry-content > h3, .entry-content > .entry-section > h3,
+.entry-content > h4, .entry-content > .entry-section > h4,
+.entry-content > ul, .entry-content > .entry-section > ul,
+.entry-content > hr, .entry-content > .entry-section > hr,
+.entry-content > figure:not(.figure-wide), .entry-content > .entry-section > figure:not(.figure-wide),
+.entry-content > .btn-block, .entry-content > .entry-section > .btn-block,
+.entry-content > .footnotes, .entry-content > .entry-section > .footnotes {
 
   @media (min-width: $screen-sm-min) {
     width: 83.33333%;
@@ -112,6 +111,13 @@ img{
 .entry-media{
 }
 
+hr + h2{
+  margin-top: $baseline * 4;
+}
+
+
+// Figures
+
 figure{
   margin-top: ($baseline * 2);
   margin-bottom: ($baseline * 2);
@@ -122,6 +128,10 @@ figure{
   @media (min-width: $screen-sm-min){
     margin-left: 0;
     margin-right: 0;
+  }
+
+  img{
+    max-width: 100%;
   }
 
   figcaption {
@@ -146,6 +156,43 @@ figure{
   }
 
 }
+
+// Back to Top Links
+
+.back-to-top a{
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-small;
+  color: $gray-light;
+  text-decoration: none;
+  line-height: 1;
+  margin-top: $baseline / 2 + 2;
+  margin-bottom: $baseline / 2 + 2;
+  vertical-align: middle;
+  font-weight: $font-weight-normal;
+
+  display: none; // Hide on small screens
+
+  @media (min-width: $screen-md-min) {
+    margin-top: $baseline + 4;
+    margin-bottom: $baseline + 4;
+
+    display: block;
+
+  }
+}
+
+
+// Lists
+
+.list-social-links{
+  @extend .list-unstyled;
+  margin-bottom: 0;
+
+  a{
+    text-decoration: none;
+  }
+}
+
 
 // Entry Footer
 
@@ -213,4 +260,12 @@ figure{
   top: 5px;
   width: auto;
   z-index: 100000; /* Above WP toolbar */
+}
+
+
+// Sections
+
+.bg-dark{
+  background-color: #222;
+  color: $gray;
 }

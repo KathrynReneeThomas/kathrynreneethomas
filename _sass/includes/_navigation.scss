@@ -6,81 +6,190 @@
 
 .navbar{
   z-index: 100; // make sure it stays on top of masthead
-  border: 0;
-//  border-bottom: 1px solid $kt-orange-dark;
-}
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid $kt-orange-dark;
 
-.navbar.navbar-transparent{
-  background-color: transparent;
-  background: transparent;
-  border-color: transparent;
-
-//  background-color: rgba(0,0,0,0.7);
-//  background: rgba(0,0,0,0.7);
-
-  background-color: rgba(255,255,255,0.4);
-  background: rgba(255,255,255,0.4);
-
-//  background-color: $kt-orange-dark;
-//  background: $kt-orange-dark;
-
-  .navbar-nav > li > a {
-    color: $kt-orange-dark;
-
-//    color: $white;
+  @media (min-width: $screen-sm-min) {
+    border-bottom: 0;
   }
-
-  .navbar-brand,
-  .navbar-brand > a {
-    color: $kt-orange-dark;
-  //  color: $white;
-
-  }
-}
-
-.navbar-nav > li > a {
-  font-size: $font-size-base-xs;
-
-  @media (min-width: $screen-md-min) {
-    font-size: $font-size-base-md;
-  }
-}
-
-.navbar-inverse {
-  background: transparent;
-}
-
-.navbar-brand,
-.navbar-brand > a {
-
-  font-size: 22px;
-
-  @media (min-width: $screen-md-min) {
-    font-size: 28px;
-  }
-}
-
-.navbar-toggle{
-  font-size: $font-size-base-xs - 2;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.navbar.navbar-transparent .navbar-toggle {
-  border-color: $kt-orange-dark;
-  color: $kt-orange-dark;
-}
-
-.navbar.navbar-transparent .navbar-toggle:hover,
-.navbar.navbar-transparent .navbar-toggle:focus {
-  background-color: $kt-orange-dark;
-  color: $white;
 }
 
 .site-title{
   font-family: $font-family-display;
 }
+
+
+// Transparent Navbar
+
+.navbar-transparent {
+  background-color: $navbar-transparent-bg-xs;
+  border-color: $navbar-transparent-border;
+
+  @media (min-width: $screen-sm-min) {
+    background-color: transparent;
+    background: transparent;
+  }
+
+  .navbar-brand {
+    letter-spacing: 0.5px; // Generalize
+    font-size: 22px; // Generalize
+
+    color: $navbar-transparent-brand-color-xs;
+
+    &:hover,
+    &:focus {
+      color: $navbar-transparent-brand-hover-color-xs;
+      background-color: $navbar-transparent-brand-hover-bg;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      color: $navbar-transparent-brand-color;
+      font-size: 28px; // Generalize
+
+      &:hover,
+      &:focus {
+        color: $navbar-transparent-brand-hover-color;
+        background-color: $navbar-transparent-brand-hover-bg;
+      }
+
+    }
+  }
+
+  .navbar-text {
+    color: $navbar-transparent-color;
+  }
+
+  .navbar-nav {
+    > li > a {
+
+      font-size: $font-size-base-xs;
+      color: $navbar-transparent-link-color-xs;
+
+//      text-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+
+      @media (min-width: $screen-sm-min) {
+        color: $navbar-transparent-link-color;
+        font-size: $font-size-base-md;
+      }
+
+      &:hover,
+      &:focus {
+        color: $navbar-transparent-link-hover-color;
+        background-color: $navbar-transparent-link-hover-bg;
+      }
+    }
+    > .active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-transparent-link-active-color;
+        background-color: $navbar-transparent-link-active-bg;
+      }
+    }
+    > .disabled > a {
+      &,
+      &:hover,
+      &:focus {
+        color: $navbar-transparent-link-disabled-color;
+        background-color: $navbar-transparent-link-disabled-bg;
+      }
+    }
+  }
+
+  .navbar-toggle {
+    color: $navbar-transparent-toggle-color;
+    border-color: $navbar-transparent-toggle-border-color;
+
+    &:hover,
+    &:focus {
+      color: $navbar-transparent-toggle-hover-color;
+      background-color: $navbar-transparent-toggle-hover-bg;
+    }
+    .icon-bar {
+      background-color: $navbar-transparent-toggle-icon-bar-bg;
+    }
+
+    // Site-specific tweaks
+    font-size: $font-size-base-xs - 2;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $navbar-transparent-border;
+  }
+
+  // Dropdown menu items
+  .navbar-nav {
+    // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $navbar-transparent-link-active-bg;
+        color: $navbar-transparent-link-active-color;
+      }
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+      // Dropdowns get custom display when collapsed
+      .open .dropdown-menu {
+        > li > a {
+          color: $navbar-transparent-link-color;
+          &:hover,
+          &:focus {
+            color: $navbar-transparent-link-hover-color;
+            background-color: $navbar-transparent-link-hover-bg;
+          }
+        }
+        > .active > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-transparent-link-active-color;
+            background-color: $navbar-transparent-link-active-bg;
+          }
+        }
+        > .disabled > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $navbar-transparent-link-disabled-color;
+            background-color: $navbar-transparent-link-disabled-bg;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*!
+*
+* Subnavigation
+*
+*/
+
+.subnav{
+  @extend .list-inline;
+  color: $gray-light;
+
+  padding-bottom: $baseline * 2;
+  border-bottom: 1px solid $gray-lighter;
+
+  li{
+    margin-bottom: 0 !important;
+  }
+
+}
+
+
+
 
 
 /*!
@@ -91,7 +200,7 @@
 
 /* Overlay style */
 
-#trigger-overlay{
+#trigger-overlay {
   cursor: pointer;
 }
 
@@ -101,15 +210,15 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: $brand-primary;
+  background: $kt-orange-dark;
 
   z-index: 900;
 }
 
 /* Overlay closing cross */
 .overlay .overlay-close {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: 20px;
   top: 20px;
@@ -144,14 +253,14 @@
 .overlay ul li {
   display: block;
   height: 20%;
-  height: calc(100% / 5);
+  height: calc(100% / 6);
   min-height: 54px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .overlay ul li a {
-  font-size: 54px;
+  font-size: 32px;
   font-weight: 300;
   display: block;
   color: #fff;

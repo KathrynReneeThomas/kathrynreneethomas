@@ -5,28 +5,17 @@
 */
 
 .page-media{
-  // .site-header{
-  //   background-position: 60% 100%;
-  //   background-size: 1600px;
-  //   height: 675px;
-  //   border-bottom: 1px solid #dd9833;
-  //   margin-bottom: 27px;
-  // }
 
 .site-wrapper{
   }
 
     .site-container{
-      @extend .container;
     }
 
       .site-content{
-        @include make-row();
       }
 
         .content-area{
-          @include make-md-column(12);
-          @include make-md-column-offset(0);
         }
 
           .site-main{
@@ -34,4 +23,79 @@
 
             article{
             }
+
+              .entry-header-container{
+                @extend .container;
+              }
+
+              .entry-header{
+//                margin-top: $baseline * 4;
+
+                @media (min-width: $screen-md-min) {
+                  margin-top: $baseline * 4;
+                }
+              }
+
+              .section-header{
+                margin-bottom: $baseline * 2;
+              }
+
+              h4{
+                margin-bottom: 0;
+                margin-top: $baseline * 4;
+                text-align: center;
+              }
+
+              .gallery-list{
+                @include make-sm-column(6);
+
+                ul{
+                  @include make-xs-column(6);
+                  @extend .list-unstyled;
+                  margin-bottom: $baseline
+                }
+              }
+
+              .gallery-list-photos{
+              }
+
+              .gallery-list-videos{
+              }
+
+              hr{
+                margin-top: $baseline;
+                border-color: $gray-lighter;
+              }
+
+              .my-gallery{
+                figure{
+                  img{
+                    max-width: none !important;
+                  }
+                }
+              }
+
+              #gallery-headshots{
+                #figure-10 img{
+                      // -webkit-transform: translate(-50%,-50%);
+                      //     -ms-transform: translate(-50%,-50%);
+                      //         transform: translate(-50%,-50%);
+                }
+
+                #figure-11 img{
+                      -webkit-transform: translate(-50%,-25%);
+                          -ms-transform: translate(-50%,-25%);
+                              transform: translate(-50%,-25%);
+                }
+
+               #figure-12 img{
+                      -webkit-transform: translate(-50%,-50%);
+                          -ms-transform: translate(-50%,-50%);
+                              transform: translate(-50%,-50%);
+                }
+              }
+
+              .figure-video{
+                margin-top: $baseline;
+              }
 }

@@ -12,84 +12,222 @@
 			display: none;
 		}
 
+	  .navbar-nav > li > a {
+
+	    @media (min-width: $screen-sm-min) {
+		    color: $gray-light;
+	    	&:hover{
+	    		color: $kt-orange-dark;
+	    	}
+
+	    }
+	  }
 		.navbar.navbar-transparent{
 			background: transparent;
 			background-color: transparent;
+			border-color: transparent;
 		}
 
+		.navbar.navbar-transparent .navbar-toggle {
+		  border-color: $kt-orange-dark;
+		  color: $kt-orange-dark;
+
+		  &:hover,
+		  &:focus{
+		    background-color: $kt-orange-dark;
+		    color: $white;
+		  }
+		}
+	}
+
+ 	@media (min-width: $screen-sm-min) {
+		background-image: url(../img/kathryn-renee-thomas-headshot-home.jpg);
+		background-repeat: no-repeat;
+
+		background-position: 50% 25px;
+		background-size: cover;
+ 	}
+
+ 	@media (min-width: $screen-md-min) {
+//		background-position: 0px 25px;
+ 	}
+
+ 	@media (min-width: $screen-lg-min) {
+ 	}
+
+ 	@media (min-width: 1440px) {
+		background-position: 100% 25px;
+ 	}
+
+
+	.home-primary{
+		background-image: url(../img/kathryn-renee-thomas-headshot-home.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 55% 0px;
+
+		position: relative;
+
+		height: 100vh;
+		// min-height: 500px;
+
+		padding-bottom: $baseline * 2;
+		margin-top: -51px;
+
+	 	@media (min-width: $screen-sm-min) {
+	 		background: none;
+			height: auto;
+			margin-top: 0px;
+			margin-bottom: $baseline * 4;
+	 	}
+	}
+
+	.home-primary-content{
+
+		@include make-xs-column(10);
+		@include make-xs-column-offset(1);
+
+		@include make-sm-column(5);
+		@include make-sm-column-offset(0);
+
+		@include make-md-column(5);
+		@include make-md-column-offset(0);
+
+		@include make-lg-column(5);
+		@include make-lg-column-offset(0);
+
+		position: absolute;
+		bottom: 5vh;
+
+		text-align: center;
+
+	 	@media (min-width: $screen-sm-min) {
+			position: relative;
+			top: 50px;
+
+			text-align: left;
+			margin-top: 0;
+	 	}
+
+	.display-title{
+		color: $kt-orange-dark;
+		margin-bottom: 0;
+	}
+
+	.display-first-name{
+		font-size: 2.6em;
+		letter-spacing: -1px;
+		line-height: 0.9;
+		display: block;
+		margin-bottom: -45px;
+
+	 	@media (min-width: $screen-sm-min) {
+	 	}
+
+	 	@media (min-width: $screen-md-min) {
+	 		font-size: 3.0em;
+			margin-bottom: -75px;
+	 	}
+
+	 	@media (min-width: $screen-lg-min) {
+	 	}
+	}
+
+	.display-middle-last-name{
+		font-size: 1.6em;
+		letter-spacing: -2px;
+		line-height: 1;
+
+	 	@media (min-width: $screen-sm-min) {
+	 	}
+
+	 	@media (min-width: $screen-md-min) {
+			font-size: 1.8em;
+			letter-spacing: -2px;
+	 	}
+
+	 	@media (min-width: $screen-lg-min) {
+	 	}
+
+	}
+
+		p.lead{
+			@extend .h3;
+			font-family: $font-family-sans-serif;
+			font-weight: $font-weight-light;
+			margin-top: $baseline;
+			margin-bottom: $baseline;
+			color: $white;
+
+		  -webkit-hyphens: none;
+		  -moz-hyphens: none;
+		  -ms-hyphens: none;
+		  hyphens: none;
+
+		 	@media (min-width: $screen-sm-min) {
+				margin-bottom: $baseline * 2;
+				margin-top: $baseline;
+				color: $gray;
+		 	}
+		}
+	}
+
+	.home-secondary-content{
+		@include make-xs-column(10);
+		@include make-xs-column-offset(1);
+
+		@include make-sm-column(4);
+		@include make-sm-column-offset(0);
+
+		@include make-md-column(3);
+		@include make-md-column-offset(0);
+
+		@include make-lg-column(3);
+		@include make-lg-column-offset(0);
+
+		margin-top: $baseline * 2;
+
+		color: $gray;
+
+		h4{
+			font-family: $font-family-sans-serif;
+		}
+
+
+		hr{
+			margin-left: 0;
+			margin-bottom: $baseline * 2;
+			border-color: $gray-lighter;
+
+		 	@media (min-width: $screen-sm-min) {
+				max-width: 30%;
+			}
+
+		}
+	}
+
+	.home-tertiary-content{
+		@include make-xs-column(10);
+		@include make-xs-column-offset(1);
+
+		@include make-sm-column(4);
+		@include make-sm-column-offset(0);
+
+		@include make-md-column(4);
+		@include make-md-column-offset(0);
+
+		@include make-lg-column(3);
+		@include make-lg-column-offset(0);
+
+		.union-affiliations{
+		}
 	}
 
 
 	.site-footer{
-		display: none;
-	}
-
-//	background-color: #243357;
-//	background-color: #19233B;
-
-	background-color: $white;
-
-	// background-image: url(../img/katie-thomas-headshot-home-a.jpg);
-	// background-repeat: no-repeat;
-	// background-position: 100% 60%;
-	// background-size: cover;
-
-	background-image: url(../img/katie-thomas-headshot-home-b.jpg);
-	background-repeat: no-repeat;
-	background-position: 83% 0%;
-	background-size: cover;
-
- 	@media (min-width: $screen-sm-min) {
-//		background-size: auto;
-//			background-position: 80% 0%;
- 	}
-
- 	@media (min-width: $screen-md-min) {
-//		background-size: auto;
-//			background-position: 80% 0%;
- 	}
-
-	.site-container{
-		@extend .container-fluid;
-	}
-
-	.site-content{
-		@include make-row();
-	}
-
-		.content-area{
-			@include make-sm-column(6);
-			@include make-md-column(5);
-			@include make-md-column-offset(1);
-
-			color: $kt-orange-dark;
-
-			margin-top: 400px;
-
-		 	@media (min-width: $screen-sm-min) {
-				margin-top: $baseline * 4;
-		 	}
+	 	@media (min-width: $screen-sm-min) {
+			display: none;
 		}
+	}
 
-			.site-main{
-			}
-
-				.display-title{
-					margin-bottom: $baseline * 4;
-				}
-
-				.display-first-name{
-					font-size: 3.3em;
-					letter-spacing: 2px;
-					line-height: 0.9;
-				}
-
-				.display-middle-last-name{
-					font-size: 1.8em;
-					letter-spacing: 1px;
-					line-height: 0.9;
-				}
-
-				article{
-				}
 }

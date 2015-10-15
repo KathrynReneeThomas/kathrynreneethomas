@@ -1,12 +1,12 @@
 # Setup
-name:             Kathryn Renee Thomas
+name:             Kathryn Renée Thomas
 title:            "Writer and Actor in Los Angeles. Member of the Katydids."
 tagline:          "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
 description:      "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
 paginate:         5
 url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
-baseurl:          "" # the subpath of your site, e.g. /blog/
-keywords:         "Kathryn Renee Thomas, Katie Thomas, Katydids, Teachers TV Land"
+baseurl:          "/kathrynreneethomas" # the subpath of your site, e.g. /blog/
+keywords:         "Kathryn Renée Thomas, Katie Thomas, Katydids, Teachers TV Land"
 
 # Permalinks
 permalink: /:title
@@ -27,6 +27,8 @@ sass:
 
 # Navigation
 nav:
+  - title: Hire Me
+    url: /hire-me/
   - title: About
     url: /about/
   - title: Teachers
@@ -35,8 +37,6 @@ nav:
     url: /press/
   - title: Media
     url: /media/
-  - title: Hire Me
-    url: /hire-me/
   - title: Contact
     url: /contact/
 
@@ -44,7 +44,7 @@ nav:
 # About / Contact
 authors:
   katie:
-    name: Kathryn Renee Thomas
+    name: Kathryn Renée Thomas
     bio:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, odit voluptas porro beatae eligendi quos illo alias ad. Ut, neque, aut tenetur veritatis nobis voluptas veniam iste id sunt distinctio?
 
     url:              http://kathrynreneethomas.com

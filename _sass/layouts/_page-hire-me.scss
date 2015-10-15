@@ -1,0 +1,328 @@
+/*!
+*
+* Hire Me / Resume Page Layouts
+*
+*/
+
+.page-hire-me{
+
+  .site-container{
+//    @extend .container-fluid;
+  }
+
+    .site-content{
+//      @include make-row();
+    }
+
+      .content-area{
+//        @include make-sm-column(12);
+//        @include make-sm-column-offset(0);
+      }
+
+        .site-main{
+        }
+
+        .entry-header.post-header{
+          display: none;
+        }
+
+        .entry-content{
+        }
+
+
+// Masthead
+.masthead.masthead-partitions{
+
+  background: $brand-primary;
+
+  .masthead-container{
+    @extend .container-fluid;
+  }
+
+  .masthead-body{
+    @include make-row();
+  }
+
+  .masthead-partition-content{
+    @include make-xs-column(10);
+    @include make-xs-column-offset(1);
+
+    @include make-sm-column(4);
+    @include make-sm-column-offset(1);
+    @include make-sm-column-pull(6);
+
+    position: relative;
+
+    h1, h2{
+    color: $white;
+    }
+
+    .lead{
+      color: $white;
+      font-weight: $font-weight-light;
+    }
+
+    .masthead-partition-message{
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+//       padding-top: $baseline * 2;
+//       padding-bottom: $baseline;
+
+//       @media (min-width: $screen-sm-min) {
+//         padding-top: $baseline * 2;
+//         padding-bottom: $baseline;
+// //        width: 80%;
+//         margin-left: auto;
+//         margin-right: auto;
+//       }
+
+//       @media (min-width: $screen-md-min) {
+//         padding-top: $baseline * 6;
+//         padding-bottom: $baseline;
+//       }
+
+//       @media (min-width: $screen-lg-min) {
+//       }
+
+    }
+
+    .subnav{
+      @extend .list-inline;
+      color: $white;
+      border-top: 1px solid;
+      border-bottom: 0;
+      border-color: darken($brand-primary, 10%);
+
+      padding-top: $baseline;
+
+      li{
+        margin-right: 15px;
+      }
+      a{
+        color: $white;
+      }
+    }
+
+  }
+
+  .masthead-partition-image{
+    @include make-sm-column(6);
+    @include make-sm-column-push(6);
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Intro Section
+
+#section-intro{
+  text-align: center;
+  padding-top: $baseline * 2;
+}
+
+// Reel Section
+
+#section-reel{
+  text-align: center;
+//  color: $gray-light;
+}
+
+
+
+// Resume
+
+  .resume-profile{
+  }
+
+  .resume-profile-header{
+    text-align: center;
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline;
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  .resume-profile-photo{
+    margin-bottom: $baseline * 2;
+  }
+
+  .resume-profile-title{
+  }
+
+  .resume-profile-download{
+    a{
+      text-decoration: none;
+    }
+  }
+
+  .resume-profile-details{
+    @include make-row();
+  }
+
+  .resume-profile-management{
+    @include make-xs-column(12);
+    @include make-xs-column-offset(0);
+
+    @include make-sm-column(4);
+    @include make-sm-column-offset(0);
+
+    @include make-md-column(4);
+    @include make-md-column-offset(0);
+
+    text-align: center;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+
+  }
+
+  .resume-profile-personal{
+    @include make-xs-column(6);
+    @include make-xs-column-offset(0);
+
+    @include make-sm-column(3);
+    @include make-sm-column-offset(0);
+
+    @include make-md-column(3);
+    @include make-md-column-offset(0);
+
+    text-align: left;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+  }
+
+  .resume-profile-additional{
+    @include make-xs-column(6);
+    @include make-xs-column-offset(0);
+
+    @include make-sm-column(3);
+    @include make-sm-column-offset(0);
+
+    @include make-md-column(3);
+    @include make-md-column-offset(0);
+
+//    text-align: right;
+
+    @media (min-width: $screen-sm-min) {
+      text-align: left;
+    }
+  }
+
+
+// Resume Sections General Styles
+  .resume-section{
+    @include make-row();
+  }
+
+  .resume-section-header,
+  .resume-profile-header{
+//    @include make-sm-column(12);
+  }
+
+  .resume-section-header{
+    @extend .h4;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+    margin-top: $baseline * 4;
+    margin-bottom: $baseline * 2;
+    padding-bottom: $baseline;
+
+    border-bottom: 1px solid $gray-lighter;
+
+    color: $brand-primary;
+    letter-spacing: 2px;
+
+  }
+
+
+// General Resume Entry Styles
+
+  .resume-detail-list{
+//    @include make-md-column(12);
+//    @include make-md-column-offset(0);
+    @extend .list-unstyled;
+  }
+
+  .resume-gig,
+  .resume-training,
+  .resume-award{
+    @include make-row();
+    margin-bottom: $baseline;
+  }
+
+
+// Gig-Specific Styles
+
+  .resume-gig-title{
+    @include make-sm-column(4);
+    font-weight: $font-weight-bold;
+  }
+
+  .resume-gig-role{
+    @include make-sm-column(3);
+  }
+
+  .resume-gig-production-team{
+    @include make-sm-column(5);
+  }
+
+
+// Training-Specific Styles
+
+.resume-training-title{
+  @include make-sm-column(4);
+  font-weight: $font-weight-bold;
+}
+
+.resume-training-details{
+  @include make-sm-column(8);
+}
+
+
+// Skill-Specific Styles
+
+.resume-skill-list{
+  @extend .list-inline;
+
+  li{
+    padding-left: 0;
+    padding-right: 2px;
+  }
+
+  li:after{
+    content: ", ";
+  }
+
+li:last-child:after{
+    content: "";
+  }
+}
+
+// Award-Specific Styles
+
+.resume-award-list{
+  @extend .list-unstyled;
+}
+
+.resume-award{
+}
+
+.resume-award-title {
+  @include make-sm-column(4);
+  font-weight: $font-weight-bold;
+}
+
+.resume-award-details {
+  @include make-sm-column(8);
+}
+
+}
