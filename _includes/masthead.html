@@ -14,7 +14,8 @@
     {% endif %}
 
     {% if page.masthead.type == "background-image" %}
-      <!-- Background Image Applied to Parent -->
+      <!-- Background Image Applied to Parent; preload image here. -->
+      <img src="{{site.baseurl}}/img/mastheads/{{ page.masthead.background-image }}" style="display: none !important; visibility: hidden !important;">
     {% endif %}
 
     {% if page.masthead.type == "gallery" %}
