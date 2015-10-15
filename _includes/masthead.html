@@ -49,7 +49,7 @@
               {% if page.masthead.subnav %}
                 <ul class="subnav">
                   {% for link in page.masthead.subnav %}
-                    <li><a href="{{site.baseurl}}{{link.anchor}}">{{ link.text }}</a></li>
+                    <li><a href="{{link.anchor}}">{{ link.text }}</a></li>
                   {% endfor %}
                 </ul>
               {% endif %}
