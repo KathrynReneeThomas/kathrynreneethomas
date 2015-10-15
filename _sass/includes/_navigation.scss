@@ -184,7 +184,13 @@
 
   li{
     margin-bottom: 0 !important;
+
+    &:last-child{
+      margin-right: 0 !important;
+    }
   }
+
+
 
 }
 
