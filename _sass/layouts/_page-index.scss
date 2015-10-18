@@ -78,7 +78,8 @@
 	 		background: none;
 			height: auto;
 			margin-top: 0px;
-			margin-bottom: $baseline * 4;
+			margin-bottom: $baseline * 2;
+			padding-bottom: $baseline * 2;
 	 	}
 	}
 
@@ -103,7 +104,7 @@
 
 	 	@media (min-width: $screen-sm-min) {
 			position: relative;
-			top: 50px;
+			top: $baseline * 2;
 
 			text-align: left;
 			margin-top: 0;
@@ -187,12 +188,22 @@
 
 		margin-top: $baseline * 2;
 
-		color: $gray;
+	 	@media (min-width: $screen-sm-min) {
+//	 		margin-top: 0;
+	 	}
+
+
 
 		h4{
 			font-family: $font-family-sans-serif;
+			font-weight: $font-weight-normal;
+			color: $gray;
 		}
 
+		p{
+			font-weight: $font-weight-light;
+			color: $gray;
+		}
 
 		hr{
 			margin-left: 0;
@@ -219,7 +230,10 @@
 		@include make-lg-column(3);
 		@include make-lg-column-offset(0);
 
-		.union-affiliations{
+		text-align: center;
+
+	 	@media (min-width: $screen-sm-min) {
+			text-align: left;
 		}
 	}
 

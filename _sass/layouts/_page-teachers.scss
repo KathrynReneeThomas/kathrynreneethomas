@@ -10,6 +10,13 @@
     @extend .masthead-navbar-overlap;
   }
 
+  .masthead.masthead-background-image{
+
+    @media (min-width: $screen-lg-min) {
+//      background-position: 50% 20%;
+    }
+  }
+
   #section-teachers{
     padding-bottom: $baseline;
   }

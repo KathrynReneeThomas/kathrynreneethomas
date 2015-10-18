@@ -30,111 +30,21 @@
         }
 
 
-// Masthead
-.masthead.masthead-partitions{
+      .masthead.masthead-partitions{
 
-  background: $brand-primary;
+        .masthead-partition-content{
+          text-align: left;
+          height: 400px;
 
-  .masthead-container{
-    @extend .container-fluid;
-  }
+          @media (min-width: $screen-md-min) {
+            height: 500px;
+          }
+        }
 
-  .masthead-body{
-    @include make-row();
-  }
-
-  .masthead-partition-content{
-    @include make-xs-column(10);
-    @include make-xs-column-offset(1);
-
-    @include make-sm-column(4);
-    @include make-sm-column-offset(1);
-    @include make-sm-column-pull(6);
-
-    position: relative;
-
-    h1, h2{
-    color: $white;
-    }
-
-    .lead{
-      color: $white;
-      font-weight: $font-weight-light;
-    }
-
-    .masthead-partition-message{
-
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-
-//       padding-top: $baseline * 2;
-//       padding-bottom: $baseline;
-
-//       @media (min-width: $screen-sm-min) {
-//         padding-top: $baseline * 2;
-//         padding-bottom: $baseline;
-// //        width: 80%;
-//         margin-left: auto;
-//         margin-right: auto;
-//       }
-
-//       @media (min-width: $screen-md-min) {
-//         padding-top: $baseline * 6;
-//         padding-bottom: $baseline;
-//       }
-
-//       @media (min-width: $screen-lg-min) {
-//       }
-
-    }
-
-    .subnav{
-      @extend .list-inline;
-      color: $white;
-      border-top: 1px solid;
-      border-bottom: 0;
-      border-color: darken($brand-primary, 10%);
-
-      margin-bottom: 0;
-      padding-bottom: 0;
-
-      padding-top: $baseline;
-
-      li{
-        margin-right: 15px;
+        .masthead-partition-image{
+          background-position: 50% 50%;
+        }
       }
-      a{
-        color: $white;
-      }
-    }
-
-  }
-
-  .masthead-partition-image{
-    @include make-sm-column(6);
-    @include make-sm-column-push(6);
-
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-// Intro Section
-
-#section-intro{
-  text-align: center;
-  padding-top: $baseline * 2;
-}
-
-// Reel Section
-
-#section-reel{
-  text-align: center;
-//  color: $gray-light;
-}
 
 
 
@@ -172,10 +82,10 @@
     @include make-xs-column-offset(0);
 
     @include make-sm-column(4);
-    @include make-sm-column-offset(0);
+    @include make-sm-column-offset(1);
 
     @include make-md-column(4);
-    @include make-md-column-offset(0);
+    @include make-md-column-offset(1);
 
     text-align: center;
 

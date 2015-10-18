@@ -132,7 +132,6 @@
 		width: 100%;
 		height: auto;
 	}
-
 }
 
 
@@ -151,7 +150,7 @@
 		height: 288px;
 
     @media (min-width: $screen-sm-min) {
- 			height: 576px;
+ 			height: 500px;
     }
 
     @media (min-width: $screen-md-min) {
@@ -164,9 +163,7 @@
 }
 
 
-
 // Masthead Gallery
-
 .masthead.masthead-gallery{
 	@extend .clearfix;
 
@@ -187,10 +184,10 @@
 	.masthead-partition-content{
 		text-align: left;
 
-    height: 350px;
+    height: 288px;
 
     @media (min-width: $screen-sm-min) {
-      height: 576px;
+      height: 500px;
     }
 
     @media (min-width: $screen-md-min) {
@@ -198,7 +195,6 @@
 
     @media (min-width: $screen-lg-min) {
     }
-
 	}
 
 	.masthead-partition-image{
@@ -206,7 +202,7 @@
 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 0%;
 
     &::before {
       content: '';
@@ -214,21 +210,121 @@
       padding-bottom: 90%;
     }
 
-
     height: 288px;
 
     @media (min-width: $screen-sm-min) {
-      height: 576px;
+      height: 500px;
     }
 
     @media (min-width: $screen-md-min) {
     }
 
     @media (min-width: $screen-lg-min) {
-//      height: 720px;
-//      background-size: cover;
     }
 
-
 	}
+}
+
+.masthead.masthead-partitions{
+
+  background: $brand-primary;
+
+  .masthead-container{
+    @extend .container-fluid;
+  }
+
+  .masthead-body{
+    @include make-row();
+  }
+
+  .masthead-partition-content{
+//    @include make-xs-column(10);
+//    @include make-xs-column-offset(1);
+
+    @include make-sm-column(6);
+    @include make-sm-column-offset(0);
+    @include make-sm-column-pull(6);
+
+    position: relative;
+
+    h1, h2{
+    color: $white;
+    }
+
+    .lead{
+      color: $white;
+      font-weight: $font-weight-light;
+    }
+
+    .masthead-partition-message{
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+
+      h2{
+        margin-bottom: $baseline * 2;
+
+        @media (min-width: $screen-sm-min) {
+          margin-bottom: $baseline * 4;
+        }
+      }
+
+      blockquote {
+        p{
+          color: $white;
+          font-weight: $font-weight-light;
+        }
+
+        footer{
+          font-style: italic;
+        }
+      }
+    }
+
+    .subnav{
+      @extend .list-inline;
+      color: $white;
+      border-top: 1px solid;
+      border-bottom: 0;
+      border-color: darken($brand-primary, 10%);
+
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      padding-top: $baseline;
+
+      li{
+        margin-right: 15px;
+      }
+      a{
+        color: $white;
+      }
+    }
+
+  }
+
+  .masthead-partition-image{
+    @include make-sm-column(6);
+    @include make-sm-column-push(6);
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// Intro Section
+
+#section-intro{
+  text-align: center;
+  padding-top: $baseline * 2;
+}
+
+// Reel Section
+
+#section-reel{
+  text-align: center;
+//  color: $gray-light;
 }
