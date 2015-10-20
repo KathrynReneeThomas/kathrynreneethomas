@@ -7,16 +7,12 @@
 .page-hire-me{
 
   .site-container{
-//    @extend .container-fluid;
   }
 
     .site-content{
-//      @include make-row();
     }
 
       .content-area{
-//        @include make-sm-column(12);
-//        @include make-sm-column-offset(0);
       }
 
         .site-main{
@@ -29,20 +25,44 @@
         .entry-content{
         }
 
-
       .masthead.masthead-partitions{
 
         .masthead-partition-content{
-          text-align: left;
-          height: 400px;
+          @include make-sm-column(6);
+          @include make-sm-column-pull(6);
 
-          @media (min-width: $screen-md-min) {
+          @include make-md-column(7);
+          @include make-md-column-pull(5);
+
+          text-align: left;
+
+          height: 380px;
+
+          @media (min-width: $screen-sm-min) {
             height: 500px;
           }
         }
 
         .masthead-partition-image{
+          @include make-sm-column(6);
+          @include make-sm-column-push(6);
+
+          @include make-md-column(5);
+          @include make-md-column-push(7);
+
           background-position: 50% 50%;
+          background-size: 414px;
+
+          padding-left: 0;
+          padding-right: 0;
+
+          height: 320px;
+
+          @media (min-width: $screen-sm-min) {
+            height: 500px;
+            background-size: cover;
+          }
+
         }
       }
 
@@ -137,7 +157,6 @@
 
   .resume-section-header,
   .resume-profile-header{
-//    @include make-sm-column(12);
   }
 
   .resume-section-header{
@@ -153,15 +172,12 @@
 
     color: $brand-primary;
     letter-spacing: 2px;
-
   }
 
 
 // General Resume Entry Styles
 
   .resume-detail-list{
-//    @include make-md-column(12);
-//    @include make-md-column-offset(0);
     @extend .list-unstyled;
   }
 
