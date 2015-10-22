@@ -1,8 +1,8 @@
 # Setup
 name:             Kathryn Renée Thomas
-title:            "Writer and Actor in Los Angeles. Member of the Katydids."
-tagline:          "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
-description:      "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
+title:            "Kathryn Renée Thomas - Writer, Actor, Katydid, Executive Producer"
+tagline:          "Official website of Kathryn Renee Thomas, writer, actor and executive producer in Los Angeles."
+description:      "Official website of Kathryn Renee Thomas, writer, actor and executive producer in Los Angeles."
 paginate:         5
 url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
 baseurl:          "" # the subpath of your site, e.g. /blog/
