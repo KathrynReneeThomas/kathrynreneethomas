@@ -4,10 +4,16 @@ title:            "Kathryn Renée Thomas"
 tagline:          "Writer, Actor, Katydid, Executive Producer"
 description:      "Official website of Kathryn Renée Thomas, writer, actor and executive producer in Los Angeles."
 paginate:         5
-url:              "http://kathrynreneethomas.github.io" # the base hostname & protocol for your site
+url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
 baseurl:          "" # the subpath of your site, e.g. /blog/
 canonical:        "http://kathrynreneethomas.com"
 keywords:         "Kathryn Renée Thomas, Katie Thomas, Katydids, Teachers TV Land, Katydids Improv"
+locale:           "United States"
+avatar:           "kathryn-renee-thomas-avatar.jpg"
+
+# Facebook Open Graph
+#fb_admins:
+#fb_appid:
 
 # Permalinks
 permalink: /:title
