@@ -233,13 +233,13 @@
       transform: translate(-50%, -50%);
       width: 90%;
 
+      @media (min-width: $screen-sm-min) {
+        margin-bottom: $baseline * 4;
+        width: 80%;
+      }
+
       h2{
         margin-bottom: $baseline * 2;
-
-        @media (min-width: $screen-sm-min) {
-          margin-bottom: $baseline * 4;
-          width: 80%;
-        }
       }
 
       blockquote {
