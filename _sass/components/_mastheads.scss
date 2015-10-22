@@ -132,7 +132,6 @@
 		width: 100%;
 		height: auto;
 	}
-
 }
 
 
@@ -151,7 +150,7 @@
 		height: 288px;
 
     @media (min-width: $screen-sm-min) {
- 			height: 576px;
+ 			height: 500px;
     }
 
     @media (min-width: $screen-md-min) {
@@ -164,9 +163,7 @@
 }
 
 
-
 // Masthead Gallery
-
 .masthead.masthead-gallery{
 	@extend .clearfix;
 
@@ -182,53 +179,115 @@
 
 
 // Masthead Partitions
-.masthead.masthead-partitions{
 
-	.masthead-partition-content{
-		text-align: left;
+.masthead.masthead-partitions {
 
-    height: 350px;
+  background: $brand-primary;
 
-    @media (min-width: $screen-sm-min) {
-      height: 576px;
-    }
+//  background: #1E2651;
 
-    @media (min-width: $screen-md-min) {
-    }
+  .masthead-container{
+    @extend .container-fluid;
+  }
 
-    @media (min-width: $screen-lg-min) {
-    }
+  .masthead-body{
+    @include make-row();
+  }
 
-	}
-
-	.masthead-partition-image{
-		padding: 0;
+  .masthead-partition-image{
+    @include make-sm-column(6);
+    @include make-sm-column-push(6);
 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: 50% 0%;
 
     &::before {
       content: '';
       display: block;
       padding-bottom: 90%;
     }
+  }
 
+  .masthead-partition-content {
+    @include make-sm-column(6);
+    @include make-sm-column-pull(6);
 
-    height: 288px;
+    position: relative;
+    text-align: left;
 
-    @media (min-width: $screen-sm-min) {
-      height: 576px;
+    h1, h2{
+    color: $white;
     }
 
-    @media (min-width: $screen-md-min) {
+    .lead{
+      color: $white;
+      font-weight: $font-weight-light;
     }
 
-    @media (min-width: $screen-lg-min) {
-//      height: 720px;
-//      background-size: cover;
+    .masthead-partition-message {
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+
+      h2{
+        margin-bottom: $baseline * 2;
+
+        @media (min-width: $screen-sm-min) {
+          margin-bottom: $baseline * 4;
+          width: 80%;
+        }
+      }
+
+      blockquote {
+        p{
+          color: $white;
+          font-weight: $font-weight-light;
+        }
+
+        footer{
+          font-style: italic;
+        }
+      }
     }
 
+    .subnav{
+      @extend .list-inline;
+      color: $white;
+      border-top: 1px solid;
+      border-bottom: 0;
+      border-color: darken($brand-primary, 10%);
+//      border-color: darken(#1E2651, 10%);
 
-	}
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      padding-top: $baseline;
+
+      li{
+        margin-right: 15px;
+      }
+      a{
+        color: $white;
+      }
+    }
+
+  }
+}
+
+// Intro Section
+
+#section-intro{
+  text-align: center;
+  padding-top: $baseline * 2;
+}
+
+// Reel Section
+
+#section-reel{
+  text-align: center;
+//  color: $gray-light;
 }

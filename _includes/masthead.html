@@ -36,20 +36,36 @@
       <div class="masthead-container">
         <div class="masthead-body">
 
-          <div class="masthead-partition-image" style="background-image: url({{site.baseurl}}/img/mastheads/{{page.masthead.featured-image }})">
-<!--             <img src="{{ page.masthead.featured-image }}" class="img-responsive"> -->
+          <div class="masthead-partition-image" style="background-image: url({{site.baseurl}}/img/mastheads/{{page.masthead.background-image }})">
+            <img src="{{site.baseurl}}/img/mastheads/{{ page.masthead.background-image }}" style="display: none !important; visibility: hidden !important;">
           </div>
 
           <div class="masthead-partition-content">
             <div class="masthead-partition-message">
-              <h2>{{ page.masthead.headline }}</h2>
+
+              {% if page.masthead.headline %}
+                <h2>{{ page.masthead.headline }}</h2>
+              {% endif %}
+
+              {% if page.masthead.subheadline %}
               <p class="lead">{{ page.masthead.subheadline }}</p>
+              {% endif %}
+
+              {% if page.masthead.blockquote %}
+              <blockquote>
+                <p>{{ page.masthead.blockquote }}</p>
+                <footer><p>&mdash; {{ page.masthead.source }}, <cite>{{ page.masthead.citation }}</cite></p></footer>
+              </blockquote>
+              {% endif %}
+
+              {% if page.masthead.details %}
               <p class="lead">{{ page.masthead.details }}</p>
+              {% endif %}
 
               {% if page.masthead.subnav %}
                 <ul class="subnav">
                   {% for link in page.masthead.subnav %}
-                    <li><a href="{{link.anchor}}">{{ link.text }}</a></li>
+                    <li><a href="{{link.anchor}}"{% if link.window == "new" %} target="_blank"{%endif%}>{{ link.text }}</a></li>
                   {% endfor %}
                 </ul>
               {% endif %}

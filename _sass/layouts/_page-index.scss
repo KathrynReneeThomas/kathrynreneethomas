@@ -17,7 +17,7 @@
 	    @media (min-width: $screen-sm-min) {
 		    color: $gray-light;
 	    	&:hover{
-	    		color: $kt-orange-dark;
+	    		color: $brand-primary;
 	    	}
 
 	    }
@@ -29,12 +29,12 @@
 		}
 
 		.navbar.navbar-transparent .navbar-toggle {
-		  border-color: $kt-orange-dark;
-		  color: $kt-orange-dark;
+		  border-color: $brand-primary;
+		  color: $brand-primary;
 
 		  &:hover,
 		  &:focus{
-		    background-color: $kt-orange-dark;
+		    background-color: $brand-primary;
 		    color: $white;
 		  }
 		}
@@ -43,16 +43,15 @@
  	@media (min-width: $screen-sm-min) {
 		background-image: url(../img/kathryn-renee-thomas-headshot-home.jpg);
 		background-repeat: no-repeat;
-
+		height: 100%;
 		background-position: 50% 25px;
-		background-size: cover;
  	}
 
  	@media (min-width: $screen-md-min) {
-//		background-position: 0px 25px;
  	}
 
  	@media (min-width: $screen-lg-min) {
+			background-size: cover;
  	}
 
  	@media (min-width: 1440px) {
@@ -64,7 +63,7 @@
 		background-image: url(../img/kathryn-renee-thomas-headshot-home.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: 55% 0px;
+		background-position: 65% 0px;
 
 		position: relative;
 
@@ -78,7 +77,8 @@
 	 		background: none;
 			height: auto;
 			margin-top: 0px;
-			margin-bottom: $baseline * 4;
+			margin-bottom: $baseline * 2;
+			padding-bottom: $baseline * 2;
 	 	}
 	}
 
@@ -103,14 +103,14 @@
 
 	 	@media (min-width: $screen-sm-min) {
 			position: relative;
-			top: 50px;
+			top: $baseline * 2;
 
 			text-align: left;
 			margin-top: 0;
 	 	}
 
 	.display-title{
-		color: $kt-orange-dark;
+		color: $brand-primary;
 		margin-bottom: 0;
 	}
 
@@ -187,12 +187,22 @@
 
 		margin-top: $baseline * 2;
 
-		color: $gray;
+	 	@media (min-width: $screen-sm-min) {
+//	 		margin-top: 0;
+	 	}
+
+
 
 		h4{
 			font-family: $font-family-sans-serif;
+			font-weight: $font-weight-normal;
+			color: $gray;
 		}
 
+		p{
+			font-weight: $font-weight-light;
+			color: $gray;
+		}
 
 		hr{
 			margin-left: 0;
@@ -219,7 +229,11 @@
 		@include make-lg-column(3);
 		@include make-lg-column-offset(0);
 
-		.union-affiliations{
+		text-align: center;
+
+	 	@media (min-width: $screen-sm-min) {
+			text-align: left;
+			padding-bottom: $baseline * 4;
 		}
 	}
 

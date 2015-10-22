@@ -7,16 +7,12 @@
 .page-hire-me{
 
   .site-container{
-//    @extend .container-fluid;
   }
 
     .site-content{
-//      @include make-row();
     }
 
       .content-area{
-//        @include make-sm-column(12);
-//        @include make-sm-column-offset(0);
       }
 
         .site-main{
@@ -29,112 +25,46 @@
         .entry-content{
         }
 
+      .masthead.masthead-partitions{
 
-// Masthead
-.masthead.masthead-partitions{
+        .masthead-partition-content{
+          @include make-sm-column(6);
+          @include make-sm-column-pull(6);
 
-  background: $brand-primary;
+          @include make-md-column(7);
+          @include make-md-column-pull(5);
 
-  .masthead-container{
-    @extend .container-fluid;
-  }
+          text-align: left;
 
-  .masthead-body{
-    @include make-row();
-  }
+          height: 380px;
 
-  .masthead-partition-content{
-    @include make-xs-column(10);
-    @include make-xs-column-offset(1);
+          @media (min-width: $screen-sm-min) {
+            height: 500px;
+          }
+        }
 
-    @include make-sm-column(4);
-    @include make-sm-column-offset(1);
-    @include make-sm-column-pull(6);
+        .masthead-partition-image{
+          @include make-sm-column(6);
+          @include make-sm-column-push(6);
 
-    position: relative;
+          @include make-md-column(5);
+          @include make-md-column-push(7);
 
-    h1, h2{
-    color: $white;
-    }
+          background-position: 50% 50%;
+          background-size: 414px;
 
-    .lead{
-      color: $white;
-      font-weight: $font-weight-light;
-    }
+          padding-left: 0;
+          padding-right: 0;
 
-    .masthead-partition-message{
+          height: 320px;
 
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
+          @media (min-width: $screen-sm-min) {
+            height: 500px;
+            background-size: cover;
+          }
 
-//       padding-top: $baseline * 2;
-//       padding-bottom: $baseline;
-
-//       @media (min-width: $screen-sm-min) {
-//         padding-top: $baseline * 2;
-//         padding-bottom: $baseline;
-// //        width: 80%;
-//         margin-left: auto;
-//         margin-right: auto;
-//       }
-
-//       @media (min-width: $screen-md-min) {
-//         padding-top: $baseline * 6;
-//         padding-bottom: $baseline;
-//       }
-
-//       @media (min-width: $screen-lg-min) {
-//       }
-
-    }
-
-    .subnav{
-      @extend .list-inline;
-      color: $white;
-      border-top: 1px solid;
-      border-bottom: 0;
-      border-color: darken($brand-primary, 10%);
-
-      margin-bottom: 0;
-      padding-bottom: 0;
-
-      padding-top: $baseline;
-
-      li{
-        margin-right: 15px;
+        }
       }
-      a{
-        color: $white;
-      }
-    }
-
-  }
-
-  .masthead-partition-image{
-    @include make-sm-column(6);
-    @include make-sm-column-push(6);
-
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-// Intro Section
-
-#section-intro{
-  text-align: center;
-  padding-top: $baseline * 2;
-}
-
-// Reel Section
-
-#section-reel{
-  text-align: center;
-//  color: $gray-light;
-}
 
 
 
@@ -172,10 +102,10 @@
     @include make-xs-column-offset(0);
 
     @include make-sm-column(4);
-    @include make-sm-column-offset(0);
+    @include make-sm-column-offset(1);
 
     @include make-md-column(4);
-    @include make-md-column-offset(0);
+    @include make-md-column-offset(1);
 
     text-align: center;
 
@@ -227,7 +157,6 @@
 
   .resume-section-header,
   .resume-profile-header{
-//    @include make-sm-column(12);
   }
 
   .resume-section-header{
@@ -243,15 +172,12 @@
 
     color: $brand-primary;
     letter-spacing: 2px;
-
   }
 
 
 // General Resume Entry Styles
 
   .resume-detail-list{
-//    @include make-md-column(12);
-//    @include make-md-column-offset(0);
     @extend .list-unstyled;
   }
 
