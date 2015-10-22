@@ -4,9 +4,8 @@ title:            "Kathryn Renée Thomas"
 tagline:          "Writer, Actor, Katydid, Executive Producer"
 description:      "Official website of Kathryn Renée Thomas, writer, actor and executive producer in Los Angeles."
 paginate:         5
-url:              "http://heyjohnsexton.github.io" # the base hostname & protocol for your site
-baseurl:          "/kathrynreneethomas" # the subpath of your site, e.g. /blog/
-canonical:        "http://kathrynreneethomas.com"
+url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
+baseurl:          "" # the subpath of your site, e.g. /blog/
 keywords:         "Kathryn Renée Thomas, Katie Thomas, Katydids, Teachers TV Land"
 
 # Permalinks
