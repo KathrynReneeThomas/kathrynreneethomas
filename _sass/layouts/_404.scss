@@ -8,48 +8,39 @@
 
 	background-color: $white;
 
-	background-image: url(../img/katie-thomas-headshot-home-b.jpg);
+	background-image: url(../img/kathryn-renee-thomas-headshot-home.jpg);
 	background-repeat: no-repeat;
 	background-position: 83% 0%;
 	background-size: cover;
 
  	@media (min-width: $screen-sm-min) {
-	// background-size: auto;
-	// background-position: 80% 0%;
  	}
 
  	@media (min-width: $screen-md-min) {
-	// background-size: auto;
-	// background-position: 80% 0%;
  	}
 
-	.site-header{
+	.site-container{
+		@extend .container-fluid;
 	}
 
-	.site-wrapper{
+	.site-content{
+		@include make-row();
 	}
 
-		.site-container{
-			@extend .container-fluid;
-		}
+	.content-area{
+		@include make-sm-column(6);
+		@include make-md-column(5);
+		@include make-md-column-offset(1);
 
-			.site-content{
-				@include make-row();
-			}
+		color: $brand-primary;
+		margin-top: 400px;
 
-				.content-area{
-					@include make-sm-column(6);
-					@include make-md-column(5);
-					@include make-md-column-offset(1);
+	 	@media (min-width: $screen-sm-min) {
+			margin-top: $baseline * 4;
+	 	}
+	}
 
-					color: $kt-orange-dark;
-
-					margin-top: 400px;
-
-				 	@media (min-width: $screen-sm-min) {
-						margin-top: $baseline * 4;
-				 	}
-				}
-					.site-main{
-					}
+	.site-footer{
+		display: none;
+	}
 }
