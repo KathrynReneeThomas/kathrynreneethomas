@@ -1,8 +1,8 @@
 # Setup
 name:             Kathryn Renée Thomas
-title:            "Kathryn Renée Thomas - Writer, Actor, Katydid, Executive Producer"
-tagline:          "Official website of Kathryn Renee Thomas, writer, actor and executive producer in Los Angeles."
-description:      "Official website of Kathryn Renee Thomas, writer, actor and executive producer in Los Angeles."
+title:            "Kathryn Renée Thomas"
+tagline:          "Writer, Actor, Katydid, Executive Producer"
+description:      "Official website of Kathryn Renée Thomas, writer, actor and executive producer in Los Angeles."
 paginate:         5
 url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
 baseurl:          "" # the subpath of your site, e.g. /blog/
@@ -45,7 +45,7 @@ nav:
 authors:
   katie:
     name: Kathryn Renée Thomas
-    bio:  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, odit voluptas porro beatae eligendi quos illo alias ad. Ut, neque, aut tenetur veritatis nobis voluptas veniam iste id sunt distinctio?
+    bio:  Kathryn Renée Thomas (Katie) is a writer and actor in Los Angeles. She is a member of the Katydids and a creator and star of Teachers on TV Land.
 
     url:              http://kathrynreneethomas.com
     email:            kathrynrenee@gmail.com
