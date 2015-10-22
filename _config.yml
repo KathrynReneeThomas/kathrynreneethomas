@@ -4,8 +4,8 @@ title:            "Writer and Actor in Los Angeles. Member of the Katydids."
 tagline:          "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
 description:      "Official website of Kathryn Renee Thomas, writer and actor in Los Angeles."
 paginate:         5
-url:              "http://heyjohnsexton.github.io" # the base hostname & protocol for your site
-baseurl:          "/kathrynreneethomas" # the subpath of your site, e.g. /blog/
+url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
+baseurl:          "" # the subpath of your site, e.g. /blog/
 keywords:         "Kathryn Renée Thomas, Katie Thomas, Katydids, Teachers TV Land"
 
 # Permalinks
