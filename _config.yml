@@ -6,7 +6,7 @@ description:      "Official website of Kathryn Renée Thomas, writer, actor and 
 paginate:         5
 url:              "http://kathrynreneethomas.com" # the base hostname & protocol for your site
 baseurl:          "" # the subpath of your site, e.g. /blog/
-keywords:         "Kathryn Renée Thomas, Katie Thomas, Katydids, Teachers TV Land"
+keywords:         "Kathryn Renée Thomas, Katie Thomas, Katydids, Teachers TV Land, Katydids Improv"
 
 # Permalinks
 permalink: /:title
