@@ -17,7 +17,7 @@
 	    @media (min-width: $screen-sm-min) {
 		    color: $gray-light;
 	    	&:hover{
-	    		color: $kt-orange-dark;
+	    		color: $brand-primary;
 	    	}
 
 	    }
@@ -29,12 +29,12 @@
 		}
 
 		.navbar.navbar-transparent .navbar-toggle {
-		  border-color: $kt-orange-dark;
-		  color: $kt-orange-dark;
+		  border-color: $brand-primary;
+		  color: $brand-primary;
 
 		  &:hover,
 		  &:focus{
-		    background-color: $kt-orange-dark;
+		    background-color: $brand-primary;
 		    color: $white;
 		  }
 		}
@@ -110,7 +110,7 @@
 	 	}
 
 	.display-title{
-		color: $kt-orange-dark;
+		color: $brand-primary;
 		margin-bottom: 0;
 	}
 
