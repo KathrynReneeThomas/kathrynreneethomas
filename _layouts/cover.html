@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body class="layout-{{ page.layout }} page-{{page.url | remove:'/' | remove: '.html' }}">
+  <body class="layout-{{ page.layout }} page-{{page.url | remove:'/' | remove: '.html' }} {% if page.slug =='index' %}page-index{% endif %}">
 
     {% include header.html %}
 
