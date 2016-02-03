@@ -15,7 +15,27 @@ masthead:
   featured-image:   "partition-press.jpg"
   background-image: "partition-press.jpg"
 ---
-<article class="press-item">
+
+{% for entry in site.data.press %}
+
+  <article class="entry entry-type-press">
+
+    <span class="entry-meta">
+      <span class="entry-date">{{ entry.date }}</span> <span class="entry-source"> &mdash; <em>{{ entry.source }}</em></span>
+    </span>
+
+    <h2 class="entry-title"><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></h2>
+
+<!--     <p class="entry-description">{{ entry.description }}</p> -->
+
+<!--     <p class="entry-readmore"><a href="{{ entry.link }}" target="_blank">Read More</a></p> -->
+
+  </article>
+
+{% endfor %}
+
+
+<!-- <article class="press-item">
   <span class="press-date">December 11, 2015</span>
   <h3 class="press-title"><a href="http://riotla.com/event/a-watch-and-talk-with-the-katydids/" target="_blank">The Katydids are doing a show at Riot LA this year!</a></h3>
 
@@ -92,4 +112,4 @@ masthead:
   <p class="press-summary">EW did an article on <em>Teachers</em> and <em>Impastor</em> when it was announced that the two shows would be picked up to go to series.</p>
 
   <p><a class="press-link" href="http://www.ew.com/article/2014/10/01/tv-land-impastor-teachers" target="_blank">See More</a></p>
-</article>
+</article> -->
